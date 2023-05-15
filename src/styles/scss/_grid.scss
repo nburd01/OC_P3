@@ -1,0 +1,58 @@
+@use 'sass:math';
+$grid-columns: 12;
+
+//base layout classes
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1em auto;
+    padding: 1em;
+    box-sizing: border-box;
+    background-color: $background;
+    h1{
+        color:pink;
+    }
+    
+    &__reserver {
+        background-color: $fourth;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        h1, p{
+            text-align: center;
+        }
+        .btn{
+            justify-content: center;
+
+        }
+    }
+    &__restaurants {
+        background-color: $sixth;
+    }
+
+    &__fonctionnement {
+        background-color: $fifth;
+        h1{
+           margin:10em;
+        }
+    }
+    > a > h1{
+        margin:0;
+    }
+    
+}
+
+.row{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header, footer{
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content: space-around;
+}

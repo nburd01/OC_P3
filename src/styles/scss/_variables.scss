@@ -1,0 +1,44 @@
+//theme colors
+$primary: #F3F3F3;
+$secondary: #99E2D0;
+$third: #008766;
+$fourth: #89C8FA;
+$fifth: #003A68;
+$sixth: #9356DC;
+$info: blue;
+$error: red;
+$black: #353535;
+$background: #EAEAEA;
+$white: #FFF;
+
+//color palette
+$colors: (
+    'primary': $primary,
+    'secondary': $secondary,
+    'third': $third,
+    'fourth': $fourth,
+    'fifth': $fifth,
+    'sixth': $sixth,
+    'info': $info,
+    'error': $error,
+    'black': $black,
+    'background': $background,
+    'white': $white,
+);
+
+// @debug map-get($colors, 'primary');
+
+//SPACING
+$base-padding:0.75em;
+$base-margin:0.75em;
+//BORDERS
+$base-border-thickness:0.3em;
+$base-border-radius:20px;
+//BOX-SHADOW
+$base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+//FONT-SIZES
+$base-font-size:1em;
+$font-size-sm:$base-font-size * 0.75;
+$font-size-lg:$base-font-size * 1.5;
+$font-size-xl:$base-font-size * 2;
+$font-size-xxl:$base-font-size * 3;

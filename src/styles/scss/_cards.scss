@@ -1,0 +1,54 @@
+@use 'sass:math';
+
+.card{
+    display: flex;
+    flex-direction:column;
+    border: $base-border-thickness solid #567e0b;
+    box-shadow: $base-box-shadow;
+    border-radius: math.div($base-border-radius, 1);
+    max-width: fit-content;
+    margin:0;
+    padding:0;
+    background-color: $secondary;
+    
+    .card-title{
+        font-size:$font-size-xl;
+        padding: 0;
+        font-weight: bold;
+        flex-wrap: wrap;
+    }
+    
+    .card-body{
+        font-size: $font-size-sm;
+        a{
+            text-decoration: underline;
+        }
+    }
+    .card-img{
+        background-color: aqua;
+        display: flex;
+        height:25em;
+        justify-content:space-around;
+        margin:0;
+    }
+    .card-img img{
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        margin:0;
+    }
+} 
+
+@media screen and (min-width: 1200px) {
+    .card{
+        background-color: $primary;
+        border: $base-border-thickness solid #fff;;
+        box-shadow: $base-box-shadow;
+        border-radius: math.div($base-border-radius,10);
+        width: 20em;
+    }
+}
+
+@debug "Hello there";
+@debug math.div(4, 2.343);
+@debug math.floor(3.435)
