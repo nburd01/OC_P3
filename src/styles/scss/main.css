@@ -119,26 +119,26 @@ header, footer {
   padding: 0;
   background-color: #99E2D0;
 }
-.card .card-title {
+.card__title {
   font-size: 2em;
   padding: 0;
   font-weight: bold;
   flex-wrap: wrap;
 }
-.card .card-body {
+.card__body {
   font-size: 0.75em;
 }
-.card .card-body a {
+.card__body a {
   text-decoration: underline;
 }
-.card .card-img {
+.card__img {
   background-color: aqua;
   display: flex;
   height: 25em;
   justify-content: space-around;
   margin: 0;
 }
-.card .card-img img {
+.card__img img {
   width: auto;
   height: 100%;
   -o-object-fit: cover;
