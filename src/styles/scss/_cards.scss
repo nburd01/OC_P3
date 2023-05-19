@@ -1,53 +1,130 @@
 @use 'sass:math';
 
-.card{
-    display: flex;
-    flex-direction:column;
-    border: $base-border-thickness solid #567e0b;
-    box-shadow: $base-box-shadow;
-    border-radius: math.div($base-border-radius, 1);
-    max-width: fit-content;
-    margin:0;
-    padding:0;
-    background-color: $secondary;
-    
-    &__title{
-        font-size:$font-size-xl;
-        padding: 0;
-        font-weight: bold;
-        flex-wrap: wrap;
+#fonctionnement-card{
+    background-color:$grey;
+    flex-direction: row;
+    overflow:visible;
+    align-items: center;
+    .title{
+        position: relative;
+        right: 2em;
     }
-    
-    &__body{
-        font-size: $font-size-sm;
-        a{
-            text-decoration: underline;
-        }
-    }
-    &__img{
-        background-color: aqua;
-        display: flex;
-        height:25em;
-        justify-content:space-around;
-        margin:0;
-    }
-    &__img img{
-        width: auto;
-        height: 100%;
-        object-fit: cover;
-        margin:0;
-    }
-} 
 
-@media screen and (min-width: 1200px) {
-    .card{
-        background-color: $primary;
-        border: $base-border-thickness solid #fff;;
-        box-shadow: $base-box-shadow;
-        border-radius: math.div($base-border-radius,10);
-        width: 20em;
+}
+#restaurant-card{
+    // height: 15.6875em;
+    box-shadow: none;
+    .card__body{
+       width:auto; 
+       background-color:bisque;
+    }
+    .cards__card__titles{
+        width:auto;
+       background-color:yellow;
+    }
+    .cards__card__icons{
+        width:10%;
+       background-color:yellowgreen;
+
+    }
+    .cards__card__content{
+        display:flex;
+        justify-content: space-between;
     }
 }
+#menu-card{
+    // height: 8em;
+    .cards__card__titles{
+        width:auto;
+       background-color:yellow;
+    }
+    .cards__card__icons{
+        width:10%;
+       background-color:yellowgreen;
+
+    }
+    .cards__card__content{
+        display:flex;
+        justify-content: space-between;
+    }
+}
+
+.cards{
+    &__card{
+        display: flex;
+        flex-direction:column;
+        border: $base-border-thickness solid ;
+        @include box-shadow;
+        border-radius: math.div($base-border-radius, 1);
+        margin:0;
+        padding:0;
+        width: 100%;
+        background-color:$white;
+        overflow:hidden;
+        
+        &__title{
+            font-size:$font-size-xl;
+            padding: 0;
+            font-weight: bold;
+            flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+            font-size: $base-font-size;
+        }
+        
+        &__body{
+            font-size: $font-size-sm;
+            a{
+                text-decoration: underline;
+            }
+        }
+        &__img{
+            display: block;
+            width: 100%;
+            height: 50%;
+            margin:0;
+            background-color: aqua;
+            object-fit: cover;
+
+
+            img{
+                margin:0;
+                object-fit: cover;
+                width: 100%;
+                max-height: -webkit-fill-available;
+            }
+
+            &__tag{
+                background-color: antiquewhite;
+            }
+        }
+    } 
+}
+
+// @media screen and (min-width: 1200px) {
+//     #fonctionnement-cards{
+//         display: flex;
+//         flex-direction: column;
+//         flex-wrap: wrap;
+//     }
+//     #restaurant-cards{
+//         height: 500px;
+//     }
+//     #menu-cards{
+//         display: flex;
+//         flex-direction: column;
+//         flex-wrap: wrap;
+//     }
+//     .cards{
+//         display:flex;
+//         .card{
+//             background-color: $primary;
+//             border: $base-border-thickness solid #fff;;
+//             border-radius: math.div($base-border-radius,10);
+//             width: 20em;
+//         }
+//     }
+// }
 
 @debug "Hello there";
 @debug math.div(4, 2.343);
