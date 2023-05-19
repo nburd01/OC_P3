@@ -1,0 +1,41 @@
+#heart{
+    width: 20%;
+}
+#fonctionnement{
+  position: relative;
+  right: 2em;
+  border-radius: 1.25em 0 0 1.25em;
+  min-width: 5.125em;
+  background-color: var(--grey-shade);
+  border: solid 1px var(--grey-shade);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  } 
+
+  .dot {
+    width: 1.5em;
+    height: 1.5em;
+    align-items: center;
+    line-height: 1em;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    border: 2px solid var(--grey-shade);
+    background-color: $sixth;
+    position: relative; 
+    right: 1.3em;
+    z-index: 4;
+    font-size: inherit;
+  }
+
+  .tag{
+    position: absolute; 
+    right: 2em;
+    padding:0.5em;
+    background-color: aquamarine;
+  }

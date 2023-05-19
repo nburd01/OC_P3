@@ -10,6 +10,7 @@ $error: red;
 $black: #353535;
 $background: #EAEAEA;
 $white: #FFF;
+$grey: #F6F6F6;
 
 //color palette
 $colors: (
@@ -24,6 +25,7 @@ $colors: (
     'black': $black,
     'background': $background,
     'white': $white,
+    'grey': $grey,
 );
 
 // @debug map-get($colors, 'primary');
@@ -35,9 +37,11 @@ $base-margin:0.75em;
 $base-border-thickness:0.3em;
 $base-border-radius:20px;
 //BOX-SHADOW
-$base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+@mixin box-shadow{
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.31);
+}
 //FONT-SIZES
-$base-font-size:1em;
+$base-font-size:16px;
 $font-size-sm:$base-font-size * 0.75;
 $font-size-lg:$base-font-size * 1.5;
 $font-size-xl:$base-font-size * 2;

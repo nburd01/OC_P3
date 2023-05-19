@@ -1,16 +1,17 @@
 @use 'sass:math';
 $grid-columns: 12;
 
-//base layout classes
+
 .container {
     display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1200px;
     margin: 1em auto;
     padding: 1em;
     box-sizing: border-box;
     background-color: $background;
-    h1{
+    &__title{
         color:pink;
     }
     
@@ -55,4 +56,13 @@ header, footer{
     padding:0;
     display:flex;
     justify-content: space-around;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        
+        &__title{
+            color:lightseagreen;
+        }
+    }
 }
