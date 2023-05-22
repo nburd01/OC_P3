@@ -4,7 +4,8 @@ $secondary: #99E2D0;
 $third: #008766;
 $fourth: #89C8FA;
 $fifth: #003A68;
-$sixth: #9356DC;
+$purple: #9356DC;
+$pink: #FF79DA;
 $info: blue;
 $error: red;
 $black: #353535;
@@ -19,7 +20,8 @@ $colors: (
     'third': $third,
     'fourth': $fourth,
     'fifth': $fifth,
-    'sixth': $sixth,
+    'purple': $purple,
+    'pink': $pink,
     'info': $info,
     'error': $error,
     'black': $black,
@@ -36,6 +38,7 @@ $base-margin:0.75em;
 //BORDERS
 $base-border-thickness:0.3em;
 $base-border-radius:20px;
+$big-border-radius:40px;
 //BOX-SHADOW
 @mixin box-shadow{
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.31);

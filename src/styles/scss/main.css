@@ -22,6 +22,15 @@ html .footer h1, body .footer h1, nav .footer h1, footer .footer h1, header .foo
   color: #F3F3F3;
 }
 
+main {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.relative {
+  position: relative;
+}
+
 body {
   overflow-x: hidden;
   opacity: 0.7;
@@ -67,30 +76,72 @@ ul {
   background-color: #EAEAEA;
 }
 .container__title {
-  color: pink;
+  color: #353535;
+}
+.container .content-test {
+  font-weight: normal;
 }
 .container__reserver {
-  background-color: #89C8FA;
+  background-color: #F3F3F3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  margin-top: 0;
+  padding-top: 0;
 }
-.container__reserver h1, .container__reserver p {
+.container__reserver h1,
+.container__reserver p {
   text-align: center;
 }
 .container__reserver .btn {
   justify-content: center;
 }
+.container__commander {
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
 .container__restaurants {
   background-color: #9356DC;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 .container__fonctionnement {
-  background-color: #003A68;
+  background-color: #FFF;
 }
 .container__fonctionnement h1 {
   margin: 10em;
+}
+.container__menus {
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  margin-top: -80px;
+}
+.container__menus__head {
+  display: flex;
+  justify-content: space-between;
+}
+.container__menus__head__h1 {
+  display: flex;
+  text-align: start;
+  margin-left: 0;
+}
+.container__menus__head__title {
+  display: flex;
+  position: relative;
+}
+.container__menus__head__title__underline {
+  width: 3em;
+  height: 0.2em;
+  position: absolute;
+  top: 1em;
+  left: 0;
+  font-size: 20px;
+  color: #fff;
+  line-height: 100px;
+  background: #99E2D0;
 }
 .container > a > h1 {
   margin: 0;
@@ -101,11 +152,20 @@ ul {
   flex-flow: row wrap;
 }
 
-header, footer {
+header,
+footer {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-around;
+}
+
+.city {
+  display: flex;
+  justify-content: center;
+  background: #EAEAEA;
+  padding: 0;
+  margin: 0;
 }
 
 @media screen and (min-width: 1200px) {
@@ -113,6 +173,15 @@ header, footer {
     color: lightseagreen;
   }
 }
+.pink {
+  color: #9356DC;
+}
+
+.shrikhand {
+  font-family: "Shrikhand", cursive;
+  margin-left: 0;
+}
+
 #fonctionnement-card {
   background-color: #F6F6F6;
   flex-direction: row;
@@ -123,48 +192,32 @@ header, footer {
   position: relative;
   right: 2em;
 }
+#fonctionnement-card .icon, #fonctionnement-card .cards__cards__card__title {
+  padding: 0;
+  margin: 0;
+}
 
 #restaurant-card {
   box-shadow: none;
 }
-#restaurant-card .card__body {
-  width: auto;
-  background-color: bisque;
-}
-#restaurant-card .cards__card__titles {
+#restaurant-card .cards__cards__card__titles {
   width: auto;
   background-color: yellow;
-}
-#restaurant-card .cards__card__icons {
-  width: 10%;
-  background-color: yellowgreen;
-}
-#restaurant-card .cards__card__content {
-  display: flex;
-  justify-content: space-between;
 }
 
-#menu-card .cards__card__titles {
+#menu-card .cards__cards__card__titles {
   width: auto;
   background-color: yellow;
-}
-#menu-card .cards__card__icons {
-  width: 10%;
-  background-color: yellowgreen;
-}
-#menu-card .cards__card__content {
-  display: flex;
-  justify-content: space-between;
 }
 
 .cards__card {
   display: flex;
   flex-direction: column;
-  border: 0.3em solid;
+  border: none;
+  padding: 0;
+  margin: 0.75em auto;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.31);
   border-radius: 20px;
-  margin: 0;
-  padding: 0;
   width: 100%;
   background-color: #FFF;
   overflow: hidden;
@@ -177,12 +230,25 @@ header, footer {
   display: flex;
   align-items: center;
   font-size: 16px;
+  width: auto;
+  background-color: bisque;
+}
+.cards__card__subtitle {
+  width: auto;
+  background-color: pink;
+  font-weight: 300;
 }
 .cards__card__body {
   font-size: 12px;
 }
 .cards__card__body a {
   text-decoration: underline;
+}
+.cards__card__icons {
+  width: 10%;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
 }
 .cards__card__img {
   display: block;
@@ -192,6 +258,7 @@ header, footer {
   background-color: aqua;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
 }
 .cards__card__img img {
   margin: 0;
@@ -202,6 +269,10 @@ header, footer {
 }
 .cards__card__img__tag {
   background-color: antiquewhite;
+}
+.cards__card__content {
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar {
@@ -225,9 +296,15 @@ header, footer {
   border: 0;
   padding: 0.75em 1.5em;
   border-radius: 20px;
-  background-color: #e2e2e2;
+  background-color: #F3F3F3;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.test-btn {
+  color: #FFF;
+  background: linear-gradient(180deg, #FF79DA 7%, #9356DC 100%);
+  font-weight: 700;
 }
 
 .btn-primary {
@@ -385,7 +462,7 @@ header, footer {
   background-color: #003a68;
 }
 
-.btn-sixth {
+.btn-purple {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
@@ -396,11 +473,11 @@ header, footer {
   width: -moz-fit-content;
   width: fit-content;
 }
-.btn-sixth:hover {
+.btn-purple:hover {
   background-color: #a16be0;
 }
 
-.btn-outlined-sixth {
+.btn-outlined-purple {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
@@ -412,8 +489,39 @@ header, footer {
   width: fit-content;
   border: 0.3em solid #9356DC;
 }
-.btn-outlined-sixth:hover {
+.btn-outlined-purple:hover {
   background-color: #9356dc;
+}
+
+.btn-pink {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75em 1.5em;
+  border-radius: 20px;
+  background-color: #FF79DA;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.btn-pink:hover {
+  background-color: #ff93e1;
+}
+
+.btn-outlined-pink {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75em 1.5em;
+  border-radius: 20px;
+  background-color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 0.3em solid #FF79DA;
+}
+.btn-outlined-pink:hover {
+  background-color: #ff79da;
 }
 
 .btn-info {
@@ -603,7 +711,7 @@ header, footer {
 }
 
 #heart {
-  width: 20%;
+  width: 4em;
 }
 
 #fonctionnement {
@@ -623,7 +731,9 @@ header, footer {
 }
 
 .dot {
-  width: 1.5em;
+  display: flex;
+  justify-content: center;
+  min-width: 1.5em;
   height: 1.5em;
   align-items: center;
   line-height: 1em;
@@ -632,6 +742,9 @@ header, footer {
   font-size: 32px;
   border: 2px solid var(--grey-shade);
   background-color: #9356DC;
+  color: #FFF;
+  font-weight: 300;
+  font-size: 16px;
   position: relative;
   right: 1.3em;
   z-index: 4;

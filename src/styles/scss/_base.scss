@@ -7,7 +7,6 @@
 *::after {
   box-sizing: border-box;
   margin: $base-margin;  
-  // font-size: 16px;
 }
 
 html, body, nav, footer, header, main {
@@ -15,7 +14,6 @@ html, body, nav, footer, header, main {
   margin: 0;
   padding: 0;
   color: $black;
-  // background-color: $primary;
   header{
     background-color: $white;
   }
@@ -26,6 +24,13 @@ html, body, nav, footer, header, main {
     }
   }
 }
+main{
+  height: fit-content;
+}
+.relative{
+  position: relative;
+}
+
 body{
   // background: url(../../resources/images/bg/Homepage.jpg) no-repeat 0 0;
   overflow-x: hidden;
