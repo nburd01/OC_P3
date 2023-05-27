@@ -12,11 +12,14 @@ html, body, nav, footer, header, main {
   padding: 0;
   color: #353535;
 }
+html footer, body footer, nav footer, footer footer, header footer, main footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 html header, body header, nav header, footer header, header header, main header {
   background-color: #FFF;
-}
-html .footer, body .footer, nav .footer, footer .footer, header .footer, main .footer {
-  background-color: #353535;
 }
 html .footer h1, body .footer h1, nav .footer h1, footer .footer h1, header .footer h1, main .footer h1 {
   color: #F3F3F3;
@@ -29,6 +32,7 @@ main {
 
 .relative {
   position: relative;
+  margin: 0;
 }
 
 body {
@@ -104,7 +108,7 @@ ul {
   flex-wrap: wrap;
 }
 .container__restaurants {
-  background-color: #9356DC;
+  background-color: #F6F6F6;
   padding-bottom: 0;
   margin-bottom: 0;
 }
@@ -117,7 +121,11 @@ ul {
 .container__menus {
   border-radius: 40px 40px 0 0;
   position: relative;
-  margin-top: -80px;
+  margin-top: -30px;
+  padding: 0;
+}
+.container__menus__dish {
+  margin: 0.75em 0.1em;
 }
 .container__menus__head {
   display: flex;
@@ -158,6 +166,27 @@ footer {
   padding: 0;
   display: flex;
   justify-content: space-around;
+  flex-direction: row;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #FFF;
+  background-color: #F6F6F6;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+}
+footer ul li {
+  margin: 0;
+}
+footer ul li .fa-solid fa-list-ul {
+  margin-left: 0;
+  background-color: greenyellow;
 }
 
 .city {
@@ -180,6 +209,8 @@ footer {
 .shrikhand {
   font-family: "Shrikhand", cursive;
   margin-left: 0;
+  font-size: 24px;
+  color: #353535;
 }
 
 #fonctionnement-card {
@@ -202,12 +233,26 @@ footer {
 }
 #restaurant-card .cards__cards__card__titles {
   width: auto;
-  background-color: yellow;
+  margin-left: 0;
+  padding-left: 0;
 }
 
-#menu-card .cards__cards__card__titles {
+#menu-card {
+  height: 4.375em;
+}
+#menu-card .cards__card__content {
+  margin: 0;
+  padding: 0;
+}
+#menu-card .cards__card__icons {
+  padding: 0;
+  margin: 0 0.5em;
+  align-self: end;
+}
+#menu-card .cards__card__titles {
+  margin: 0;
+  padding: 0;
   width: auto;
-  background-color: yellow;
 }
 
 .cards__card {
@@ -231,11 +276,10 @@ footer {
   align-items: center;
   font-size: 16px;
   width: auto;
-  background-color: bisque;
 }
 .cards__card__subtitle {
   width: auto;
-  background-color: pink;
+  margin-right: -4em;
   font-weight: 300;
 }
 .cards__card__body {
@@ -246,16 +290,15 @@ footer {
 }
 .cards__card__icons {
   width: 10%;
-  background-color: yellowgreen;
   display: flex;
   justify-content: center;
 }
 .cards__card__img {
   display: block;
   width: 100%;
-  height: 50%;
+  height: 13em;
+  overflow: hidden;
   margin: 0;
-  background-color: aqua;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
@@ -265,6 +308,7 @@ footer {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  height: 23.4em;
   max-height: -webkit-fill-available;
 }
 .cards__card__img__tag {
@@ -273,6 +317,8 @@ footer {
 .cards__card__content {
   display: flex;
   justify-content: space-between;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .navbar {
@@ -728,6 +774,10 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.icon .fa-solid fa-heart {
+  border: 1px solid #244811;
+  border-radius: 30px;
 }
 
 .dot {

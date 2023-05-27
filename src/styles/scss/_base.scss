@@ -14,11 +14,17 @@ html, body, nav, footer, header, main {
   margin: 0;
   padding: 0;
   color: $black;
+  footer{
+    background-color: $black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+  }
   header{
     background-color: $white;
   }
   .footer{
-    background-color: $black;
     h1{
       color: $primary;
     }
@@ -29,6 +35,7 @@ main{
 }
 .relative{
   position: relative;
+  margin: 0;
 }
 
 body{

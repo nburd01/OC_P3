@@ -43,7 +43,7 @@ $grid-columns: 12;
   }
 
   &__restaurants {
-    background-color: $purple;
+    background-color: $grey;
     padding-bottom:0;
     margin-bottom:0;
   }
@@ -58,10 +58,15 @@ $grid-columns: 12;
   &__menus{ 
     border-radius: $big-border-radius $big-border-radius 0 0;
     position: relative;
-    margin-top: -80px;
+    margin-top: -30px;
+    padding:0;
+    &__dish{
+      margin: 0.75em 0.1em;
+    }
     &__head{
         display: flex;
         justify-content: space-between;
+
 
         &__h1{
             display: flex;
@@ -101,6 +106,26 @@ footer {
   padding: 0;
   display: flex;
   justify-content: space-around;
+  flex-direction: row;
+}
+footer{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: $white;
+    background-color: $grey;
+    ul{
+      display:flex;
+      flex-direction: column;
+      background-color: aqua;
+      li{
+        margin: 0;
+          .fa-solid fa-list-ul{
+            margin-left:0;
+            background-color: greenyellow;
+        }
+      }
+    }
 }
 .city{
     display:flex;
