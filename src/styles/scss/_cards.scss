@@ -17,9 +17,9 @@
 #restaurant-card {
   // height: 15.6875em;
   box-shadow: none;
+    // background-color: yellow;
   .cards__cards__card__titles {
     width: auto;
-    // background-color: yellow;
     margin-left: 0;
     padding-left: 0;
   }
@@ -85,6 +85,14 @@
         display: flex;
         justify-content: center;
       }
+      &__tag {
+        position: absolute;
+        right: 2em;
+        top: 1em;
+        padding: 0.5em;
+        background-color: aquamarine;
+        max-width: inherit;
+      }
     &__img {
       display: block;
       width: 100%;
@@ -101,10 +109,6 @@
         width: 100%;
         height:23.4em;
         max-height: -webkit-fill-available;
-      }
-
-      &__tag {
-        background-color: antiquewhite;
       }
     }
     &__content {

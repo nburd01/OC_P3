@@ -17,6 +17,14 @@
     color: $white;
     background: linear-gradient(180deg, $pink 7%, $purple 100%);
     font-weight: 700;
+    @include box-shadow;
+    transition-property: transform;
+    transition: all 400ms;
+    &:hover {
+        background: linear-gradient(180deg, lighten($pink, 5%), lighten($purple, 5%));
+        box-shadow: 10px 10px 20px 10px rgba(0,0,0,0.31);
+        // transform: scale(1.15);
+    }
 }
 
 @each $key, $val in $colors{
