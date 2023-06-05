@@ -7,7 +7,6 @@
 *::after {
   box-sizing: border-box;
   margin: $base-margin;  
-  // font-size: 16px;
 }
 
 html, body, nav, footer, header, main {
@@ -15,21 +14,34 @@ html, body, nav, footer, header, main {
   margin: 0;
   padding: 0;
   color: $black;
-  // background-color: $primary;
+  footer{
+    background-color: $black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+  }
   header{
     background-color: $white;
   }
   .footer{
-    background-color: $black;
     h1{
       color: $primary;
     }
   }
 }
+main{
+  height: fit-content;
+}
+.relative{
+  position: relative;
+  margin: 0;
+}
+
 body{
   // background: url(../../resources/images/bg/Homepage.jpg) no-repeat 0 0;
   overflow-x: hidden;
-  opacity: 0.7;
+  // opacity: 0.7;
   z-index:20;
   background-position: top center;
 }

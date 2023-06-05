@@ -1,68 +1,144 @@
-@use 'sass:math';
+@use "sass:math";
 $grid-columns: 12;
 
 
 .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 1em auto;
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: $background;
+  &__title {
+    color: $black;
+  }
+  .content-test{
+    font-weight: normal;
+  }
+
+  &__reserver {
+    background-color: $primary;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 1200px;
-    margin: 1em auto;
-    padding: 1em;
-    box-sizing: border-box;
-    background-color: $background;
-    &__title{
-        color:pink;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 0;
+    h1,
+    p {
+      text-align: center;
     }
-    
-    &__reserver {
-        background-color: $fourth;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-        h1, p{
-            text-align: center;
-        }
-        .btn{
-            justify-content: center;
+    .btn {
+      justify-content: center;
+    }
+  }
 
-        }
-    }
-    &__restaurants {
-        background-color: $sixth;
-    }
-
-    &__fonctionnement {
-        background-color: $fifth;
-        h1{
-           margin:10em;
-        }
-    }
-    > a > h1{
-        margin:0;
-    }
-    
-}
-
-.row{
+  &__commander{
     display: flex;
-    flex-flow: row wrap;
+    align-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__restaurants {
+    background-color: $grey;
+    padding-bottom:0;
+    margin-bottom:0;
+  }
+
+  &__fonctionnement {
+    background-color: $white;
+    h1 {
+      margin: 10em;
+    }
 }
 
-header, footer{
-    margin:0;
+  &__menus{ 
+    border-radius: $big-border-radius $big-border-radius 0 0;
+    position: relative;
+    margin-top: -30px;
     padding:0;
+    &__dish{
+      margin: 0.75em 0.1em;
+    }
+    &__head{
+        display: flex;
+        justify-content: space-between;
+
+
+        &__h1{
+            display: flex;
+            text-align: start;
+            margin-left:0;
+        }
+        &__title{
+            display:flex;
+            position: relative;
+            &__underline{
+                width:3em;
+                height:0.2em;
+                position: absolute;
+                top:1em;
+                left:0;
+                font-size:20px;
+                color:#fff;
+                line-height:100px;
+                background: $secondary;
+            }   
+        }
+    }
+  }
+  > a > h1 {
+    margin: 0;
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+header,
+footer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+footer{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: $white;
+    background-color: $grey;
+    ul{
+      display:flex;
+      flex-direction: column;
+      background-color: aqua;
+      li{
+        margin: 0;
+          .fa-solid fa-list-ul{
+            margin-left:0;
+            background-color: greenyellow;
+        }
+      }
+    }
+}
+.city{
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
+    background: $background;
+    padding: 0;
+    margin: 0;
 }
 
 @media screen and (min-width: 1200px) {
-    .container {
-        
-        &__title{
-            color:lightseagreen;
-        }
+  .container {
+    &__title {
+      color: lightseagreen;
     }
+  }
 }

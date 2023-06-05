@@ -1,104 +1,123 @@
-@use 'sass:math';
+@use "sass:math";
 
-#fonctionnement-card{
-    background-color:$grey;
-    flex-direction: row;
-    overflow:visible;
-    align-items: center;
-    .title{
-        position: relative;
-        right: 2em;
-    }
-
+#fonctionnement-card {
+  background-color: $grey;
+  flex-direction: row;
+  overflow: visible;
+  align-items: center;
+  .title {
+    position: relative;
+    right: 2em;
+  }
+  .icon, .cards__cards__card__title{
+    padding:0;
+    margin:0;
+  }
 }
-#restaurant-card{
-    // height: 15.6875em;
-    box-shadow: none;
-    .card__body{
-       width:auto; 
-       background-color:bisque;
-    }
-    .cards__card__titles{
-        width:auto;
-       background-color:yellow;
-    }
-    .cards__card__icons{
-        width:10%;
-       background-color:yellowgreen;
-
-    }
-    .cards__card__content{
-        display:flex;
-        justify-content: space-between;
-    }
+#restaurant-card {
+  // height: 15.6875em;
+  box-shadow: none;
+    // background-color: yellow;
+  .cards__cards__card__titles {
+    width: auto;
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
-#menu-card{
-    // height: 8em;
-    .cards__card__titles{
-        width:auto;
-       background-color:yellow;
-    }
-    .cards__card__icons{
-        width:10%;
-       background-color:yellowgreen;
-
-    }
-    .cards__card__content{
-        display:flex;
-        justify-content: space-between;
-    }
+#menu-card {
+  height: 4.375em;
+  .cards__card__content{
+    margin:0;
+    padding:0;
+  }
+  .cards__card__icons{
+    padding: 0;
+    margin: 0 0.5em;
+    align-self: end;
+  }
+  .cards__card__titles {
+    margin: 0 ;
+    padding: 0;
+    width: auto;
+    // background-color: yellow;
+  }
 }
 
-.cards{
-    &__card{
+.cards {
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 0;
+    margin: $base-margin auto;
+    @include box-shadow;
+    border-radius: math.div($base-border-radius, 1);
+    width: 100%;
+    background-color: $white;
+    overflow: hidden;
+
+    &__title {
+      font-size: $font-size-xl;
+      padding: 0;
+      font-weight: bold;
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      font-size: $base-font-size;
+      width: auto;
+      // background-color: bisque;
+    }
+    &__subtitle {
+      width: auto;
+      margin-right: -4em;
+      font-weight: 300;
+    }
+
+    &__body {
+      font-size: $font-size-sm;
+      a {
+        text-decoration: underline;
+      }
+    }
+    &__icons {
+        width: 10%;
+        // background-color: yellowgreen;
         display: flex;
-        flex-direction:column;
-        border: $base-border-thickness solid ;
-        @include box-shadow;
-        border-radius: math.div($base-border-radius, 1);
-        margin:0;
-        padding:0;
+        justify-content: center;
+      }
+      &__tag {
+        position: absolute;
+        right: 2em;
+        top: 1em;
+        padding: 0.5em;
+        background-color: aquamarine;
+        max-width: inherit;
+      }
+    &__img {
+      display: block;
+      width: 100%;
+      height: 13em;
+      overflow: hidden;
+      margin: 0;
+      // background-color: aqua;
+      object-fit: cover;
+      position: relative;
+
+      img {
+        margin: 0;
+        object-fit: cover;
         width: 100%;
-        background-color:$white;
-        overflow:hidden;
-        
-        &__title{
-            font-size:$font-size-xl;
-            padding: 0;
-            font-weight: bold;
-            flex-wrap: wrap;
-            display: flex;
-            align-items: center;
-            font-size: $base-font-size;
-        }
-        
-        &__body{
-            font-size: $font-size-sm;
-            a{
-                text-decoration: underline;
-            }
-        }
-        &__img{
-            display: block;
-            width: 100%;
-            height: 50%;
-            margin:0;
-            background-color: aqua;
-            object-fit: cover;
-
-
-            img{
-                margin:0;
-                object-fit: cover;
-                width: 100%;
-                max-height: -webkit-fill-available;
-            }
-
-            &__tag{
-                background-color: antiquewhite;
-            }
-        }
-    } 
+        height:23.4em;
+        max-height: -webkit-fill-available;
+      }
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+        padding-left: 0;
+      }
+  }
 }
 
 // @media screen and (min-width: 1200px) {
@@ -128,4 +147,4 @@
 
 @debug "Hello there";
 @debug math.div(4, 2.343);
-@debug math.floor(3.435)
+@debug math.floor(3.435);
