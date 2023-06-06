@@ -212,16 +212,6 @@ footer ul li .fa-solid fa-list-ul {
   color: #353535;
 }
 
-@keyframes wipe-enter {
-  from {
-    transform: translateX(-100%);
-    transform: opacity(0%);
-  }
-  to {
-    transform: translateX(0%);
-    transform: opacity(100%);
-  }
-}
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -234,10 +224,10 @@ footer ul li .fa-solid fa-list-ul {
 }
 @media (prefers-reduced-motion: no-preference) {
   .cards {
-    animation-name: wipe-enter;
     animation-name: fade-in;
     animation-duration: 400ms;
     animation-delay: 400ms;
+    animation-fill-mode: both;
   }
 }
 .cards:nth-child(1) {
@@ -318,6 +308,9 @@ footer ul li .fa-solid fa-list-ul {
   width: auto;
 }
 
+.cards {
+  opacity: 0;
+}
 .cards__card {
   display: flex;
   flex-direction: column;
