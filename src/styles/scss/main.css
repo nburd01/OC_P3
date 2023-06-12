@@ -828,7 +828,7 @@ footer ul li .fa-solid fa-list-ul {
   display: flex;
 }
 
-.fa-solid.fa-heart {
+.fas.fa-heart {
   position: relative;
   width: 100%;
   height: 20px;
@@ -841,8 +841,41 @@ footer ul li .fa-solid fa-list-ul {
   transition: background-position 0.5s;
 }
 
-.icon:hover .fa-solid.fa-heart {
+.far.fa-heart {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  color: purple;
+}
+
+.far.fa-heart::before {
+  content: "\f004";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  transition: color 0.5s;
+}
+
+.icon:hover .fas.fa-heart {
   background-position: 0% 0%;
+}
+
+.icon:hover .far.fa-heart::before {
+  content: "\f004";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, red 50%, blue 50%);
+  background-size: 100% 200%;
+  background-position: 0% 0%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .dot {
