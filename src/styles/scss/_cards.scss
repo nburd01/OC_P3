@@ -14,7 +14,7 @@
 
 
 @media (prefers-reduced-motion: no-preference) {
-  .cards {
+  #restaurant-cards, #menu-cards {
     animation-name: fade-in;
     animation-duration: 400ms;
     animation-delay: 400ms;
@@ -23,13 +23,15 @@
 }
 
 @for $i from 1 to 10 {
-  .cards:nth-child(#{$i}) { animation-delay: $i * 1s; }
+  #restaurant-cards:nth-child(#{$i}) { animation-delay: $i * 1s; };
+  #menu-cards:nth-child(#{$i}) { animation-delay: $i * 1s; }
 }
 
 #fonctionnement-card {
   background-color: $grey;
   flex-direction: row;
   overflow: visible;
+  display: visible;
   align-items: center;
   .title {
     position: relative;
@@ -41,32 +43,90 @@
   }
 }
 #restaurant-card {
-  // height: 15.6875em;
   box-shadow: none;
-    // background-color: yellow;
   .cards__cards__card__titles {
     width: auto;
     margin-left: 0;
     padding-left: 0;
   }
 }
+
+.menu__card .card__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  border-radius: 0 1rem 1rem 0;
+  font-size: 1.8rem;
+  transition: width 0.5s;
+  background-color: #99E2D0;
+  color: #fff;
+}
+.menu__card:hover .card__check {
+  width: 4rem;
+  display: flex;
+}
+.menu__card .fa-check-circle {
+  transition-delay: 0.5s;
+  transition: transform 0.5s ease-in;
+}
+.menu__card:hover .fa-check-circle {
+  transform: rotate(1turn);
+}
+
+$prog-bar-dur: 1000ms;
+$prog-bar-delay: 1000ms;
+.checkmark {
+  width: auto;
+  height: auto;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: slideCheckmark-bar $prog-bar-dur $prog-bar-delay;
+  animation-fill-mode: forwards;
+}
+
 #menu-card {
   height: 4.375em;
-  .cards__card__content{
-    margin:0;
-    padding:0;
+  .cards__card__content {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    &:hover {
+      .checkmark {
+        animation: slideCheckmark 1000ms forwards;
+        transform: scaleX(0.2);
+        animation-duration: 1000ms 1000ms;
+        animation: slideCheckmark 1.0s forwards;
+
+      }
+    }
   }
-  .cards__card__icons{
+
+  @keyframes slideCheckmark {
+    from {
+      transform: scaleX(-9999px);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  .cards__card__icons {
     padding: 0;
     margin: 0 0.5em;
     align-self: end;
   }
+
   .cards__card__titles {
-    margin: 0 ;
+    margin: 0;
     padding: 0;
     width: auto;
   }
 }
+
+
+
+
 
 .cards {
   opacity: 0;
@@ -146,31 +206,51 @@
   }
 }
 
-// @media screen and (min-width: 1200px) {
-//     #fonctionnement-cards{
-//         display: flex;
-//         flex-direction: column;
-//         flex-wrap: wrap;
-//     }
-//     #restaurant-cards{
-//         height: 500px;
-//     }
-//     #menu-cards{
-//         display: flex;
-//         flex-direction: column;
-//         flex-wrap: wrap;
-//     }
-//     .cards{
-//         display:flex;
-//         .card{
-//             background-color: $primary;
-//             border: $base-border-thickness solid #fff;;
-//             border-radius: math.div($base-border-radius,10);
-//             width: 20em;
-//         }
-//     }
-// }
+@media screen and (min-width: 1200px) {
+    #fonctionnement-cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        #fonctionnement-card {
+          background-color: $grey;
+          width:20em;
+          overflow: visible;
+          align-items: center;
+          .title {
+            position: relative;
+            right: 2em;
+          }
+          .icon, .cards__cards__card__title{
+            padding:0;
+            margin:0;
+          }
+        }
+    }
+    #restaurant-cards{
+        width: 33em;
+    }
+    #menu-cards{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        // #menu-card{
+        //   background-color: lightcoral;
+        //   width: 75%;
+        // }
+    }
+    .cards{
+        display:flex;
+        .card{
+            background-color: $primary;
+            border: $base-border-thickness solid #fff;;
+            border-radius: math.div($base-border-radius,10);
+            width: 20em;
+        }
+    }
+}
 
 @debug "Hello there";
 @debug math.div(4, 2.343);
 @debug math.floor(3.435);
+
+

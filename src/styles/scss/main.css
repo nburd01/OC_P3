@@ -197,8 +197,47 @@ footer ul li .fa-solid fa-list-ul {
 }
 
 @media screen and (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
   .container__title {
     color: lightseagreen;
+  }
+  .container__restaurants {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+  .container__restaurants__cards {
+    width: 100%;
+  }
+  .container__fonctionnement {
+    display: flex;
+    background-color: #FFF;
+  }
+  .container__fonctionnement h1 {
+    margin: 10em;
+  }
+  .container__menus {
+    border-radius: 40px 40px 0 0;
+    position: relative;
+    margin-top: -30px;
+    padding: 0;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container__menus__dish {
+    margin: 0.75em 0.1em;
+    width: 40em;
+    justify-content: space-around;
+  }
+  .container__menus__head {
+    display: flex;
+    justify-content: space-evenly;
   }
 }
 .pink {
@@ -223,46 +262,82 @@ footer ul li .fa-solid fa-list-ul {
   }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .cards {
+  #restaurant-cards, #menu-cards {
     animation-name: fade-in;
     animation-duration: 400ms;
     animation-delay: 400ms;
     animation-fill-mode: both;
   }
 }
-.cards:nth-child(1) {
+#restaurant-cards:nth-child(1) {
   animation-delay: 1s;
 }
 
-.cards:nth-child(2) {
+#menu-cards:nth-child(1) {
+  animation-delay: 1s;
+}
+
+#restaurant-cards:nth-child(2) {
   animation-delay: 2s;
 }
 
-.cards:nth-child(3) {
+#menu-cards:nth-child(2) {
+  animation-delay: 2s;
+}
+
+#restaurant-cards:nth-child(3) {
   animation-delay: 3s;
 }
 
-.cards:nth-child(4) {
+#menu-cards:nth-child(3) {
+  animation-delay: 3s;
+}
+
+#restaurant-cards:nth-child(4) {
   animation-delay: 4s;
 }
 
-.cards:nth-child(5) {
+#menu-cards:nth-child(4) {
+  animation-delay: 4s;
+}
+
+#restaurant-cards:nth-child(5) {
   animation-delay: 5s;
 }
 
-.cards:nth-child(6) {
+#menu-cards:nth-child(5) {
+  animation-delay: 5s;
+}
+
+#restaurant-cards:nth-child(6) {
   animation-delay: 6s;
 }
 
-.cards:nth-child(7) {
+#menu-cards:nth-child(6) {
+  animation-delay: 6s;
+}
+
+#restaurant-cards:nth-child(7) {
   animation-delay: 7s;
 }
 
-.cards:nth-child(8) {
+#menu-cards:nth-child(7) {
+  animation-delay: 7s;
+}
+
+#restaurant-cards:nth-child(8) {
   animation-delay: 8s;
 }
 
-.cards:nth-child(9) {
+#menu-cards:nth-child(8) {
+  animation-delay: 8s;
+}
+
+#restaurant-cards:nth-child(9) {
+  animation-delay: 9s;
+}
+
+#menu-cards:nth-child(9) {
   animation-delay: 9s;
 }
 
@@ -270,6 +345,7 @@ footer ul li .fa-solid fa-list-ul {
   background-color: #F6F6F6;
   flex-direction: row;
   overflow: visible;
+  display: visible;
   align-items: center;
 }
 #fonctionnement-card .title {
@@ -290,12 +366,62 @@ footer ul li .fa-solid fa-list-ul {
   padding-left: 0;
 }
 
+.menu__card .card__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  border-radius: 0 1rem 1rem 0;
+  font-size: 1.8rem;
+  transition: width 0.5s;
+  background-color: #99E2D0;
+  color: #fff;
+}
+
+.menu__card:hover .card__check {
+  width: 4rem;
+  display: flex;
+}
+
+.menu__card .fa-check-circle {
+  transition-delay: 0.5s;
+  transition: transform 0.5s ease-in;
+}
+
+.menu__card:hover .fa-check-circle {
+  transform: rotate(1turn);
+}
+
+.checkmark {
+  width: auto;
+  height: auto;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: slideCheckmark-bar 1000ms 1000ms;
+  animation-fill-mode: forwards;
+}
+
 #menu-card {
   height: 4.375em;
 }
 #menu-card .cards__card__content {
   margin: 0;
   padding: 0;
+  position: relative;
+}
+#menu-card .cards__card__content:hover .checkmark {
+  animation: slideCheckmark 1000ms forwards;
+  transform: scaleX(0.2);
+  animation-duration: 1000ms 1000ms;
+  animation: slideCheckmark 1s forwards;
+}
+@keyframes slideCheckmark {
+  from {
+    transform: scaleX(-9999px);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 #menu-card .cards__card__icons {
   padding: 0;
@@ -382,6 +508,44 @@ footer ul li .fa-solid fa-list-ul {
   padding-left: 0;
 }
 
+@media screen and (min-width: 1200px) {
+  #fonctionnement-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #fonctionnement-cards #fonctionnement-card {
+    background-color: #F6F6F6;
+    width: 20em;
+    overflow: visible;
+    align-items: center;
+  }
+  #fonctionnement-cards #fonctionnement-card .title {
+    position: relative;
+    right: 2em;
+  }
+  #fonctionnement-cards #fonctionnement-card .icon, #fonctionnement-cards #fonctionnement-card .cards__cards__card__title {
+    padding: 0;
+    margin: 0;
+  }
+  #restaurant-cards {
+    width: 33em;
+  }
+  #menu-cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .cards {
+    display: flex;
+  }
+  .cards .card {
+    background-color: #F3F3F3;
+    border: 0.3em solid #fff;
+    border-radius: 2px;
+    width: 20em;
+  }
+}
 .navbar {
   display: flex;
   flex-direction: row;
@@ -828,11 +992,15 @@ footer ul li .fa-solid fa-list-ul {
   display: flex;
 }
 
-.fas.fa-heart {
+.fa-solid.fa-check {
+  color: blue;
+}
+
+.far.fa-heart {
   position: relative;
   width: 100%;
   height: 20px;
-  background-image: linear-gradient(to bottom, red 50%, blue 50%);
+  background-image: linear-gradient(to bottom, red 50%, lightseagreen 50%);
   background-size: 100% 200%;
   background-position: 0% 100%;
   background-clip: text;
@@ -841,41 +1009,25 @@ footer ul li .fa-solid fa-list-ul {
   transition: background-position 0.5s;
 }
 
-.far.fa-heart {
+.icon:hover .far.fa-heart {
+  background-position: 0% 0%;
+}
+
+.fas.fa-heart {
   position: relative;
   width: 100%;
   height: 20px;
-  color: purple;
-}
-
-.far.fa-heart::before {
-  content: "\f004";
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #000;
-  transition: color 0.5s;
+  background-image: linear-gradient(to bottom, red 50%, lightseagreen 50%);
+  background-size: 100% 200%;
+  background-position: 0% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: background-position 0.5s;
 }
 
 .icon:hover .fas.fa-heart {
   background-position: 0% 0%;
-}
-
-.icon:hover .far.fa-heart::before {
-  content: "\f004";
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom, red 50%, blue 50%);
-  background-size: 100% 200%;
-  background-position: 0% 0%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 .dot {
@@ -904,4 +1056,46 @@ footer ul li .fa-solid fa-list-ul {
   right: 2em;
   padding: 0.5em;
   background-color: aquamarine;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  animation: hide-spinner 0.5s 2s forwards;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: spinner 1.5s linear 3;
+}
+
+@keyframes hide-spinner {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
 }/*# sourceMappingURL=main.css.map */
