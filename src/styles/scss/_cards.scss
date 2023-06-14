@@ -51,64 +51,14 @@
   }
 }
 
-.menu__card .card__check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 0;
-  border-radius: 0 1rem 1rem 0;
-  font-size: 1.8rem;
-  transition: width 0.5s;
-  background-color: #99E2D0;
-  color: #fff;
-}
-.menu__card:hover .card__check {
-  width: 4rem;
-  display: flex;
-}
-.menu__card .fa-check-circle {
-  transition-delay: 0.5s;
-  transition: transform 0.5s ease-in;
-}
-.menu__card:hover .fa-check-circle {
-  transform: rotate(1turn);
-}
-
-$prog-bar-dur: 1000ms;
-$prog-bar-delay: 1000ms;
-.checkmark {
-  width: auto;
-  height: auto;
-  transform-origin: left;
-  transform: scaleX(0);
-  animation: slideCheckmark-bar $prog-bar-dur $prog-bar-delay;
-  animation-fill-mode: forwards;
-}
 
 #menu-card {
+  position: relative;
   height: 4.375em;
   .cards__card__content {
     margin: 0;
     padding: 0;
     position: relative;
-    &:hover {
-      .checkmark {
-        animation: slideCheckmark 1000ms forwards;
-        transform: scaleX(0.2);
-        animation-duration: 1000ms 1000ms;
-        animation: slideCheckmark 1.0s forwards;
-
-      }
-    }
-  }
-
-  @keyframes slideCheckmark {
-    from {
-      transform: scaleX(-9999px);
-    }
-    to {
-      transform: scaleX(1);
-    }
   }
 
   .cards__card__icons {
@@ -121,6 +71,21 @@ $prog-bar-delay: 1000ms;
     margin: 0;
     padding: 0;
     width: auto;
+  }
+  &:hover {
+    .checkmark {
+      transform: translateX(-60px);
+    }
+  }
+  .checkmark{
+    position: absolute;
+    left: 450px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: translateX(20px);
+    }
   }
 }
 
@@ -151,7 +116,6 @@ $prog-bar-delay: 1000ms;
       align-items: center;
       font-size: $base-font-size;
       width: auto;
-      // background-color: bisque;
     }
     &__subtitle {
       width: auto;
@@ -167,7 +131,6 @@ $prog-bar-delay: 1000ms;
     }
     &__icons {
         width: 10%;
-        // background-color: yellowgreen;
         display: flex;
         justify-content: center;
       }
@@ -185,7 +148,6 @@ $prog-bar-delay: 1000ms;
       height: 13em;
       overflow: hidden;
       margin: 0;
-      // background-color: aqua;
       object-fit: cover;
       position: relative;
 
@@ -233,10 +195,9 @@ $prog-bar-delay: 1000ms;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        // #menu-card{
-        //   background-color: lightcoral;
-        //   width: 75%;
-        // }
+        #menu-card{
+          width: 75%;
+        }
     }
     .cards{
         display:flex;

@@ -43,7 +43,7 @@ $grid-columns: 12;
   }
 
   &__restaurants {
-    background-color: $grey;
+    background-color: $background;
     padding-bottom:0;
     margin-bottom:0;
   }
@@ -117,7 +117,7 @@ footer{
     ul{
       display:flex;
       flex-direction: column;
-      background-color: aqua;
+      // background-color: aqua;
       li{
         margin: 0;
           .fa-solid fa-list-ul{
@@ -143,6 +143,7 @@ footer{
       color: lightseagreen;
     }
     &__restaurants{
+    background-color: $primary;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
@@ -158,25 +159,39 @@ footer{
         margin: 10em;
       }
   }
-  &__menus{ 
-    border-radius: $big-border-radius $big-border-radius 0 0;
-    position: relative;
-    margin-top: -30px;
-    padding:0;
-    max-width: 1200px;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
-    &__dish{
-      margin: 0.75em 0.1em;
-      width: 40em;
-      justify-content: space-around;
+    &__menus{ 
+      border-radius: $big-border-radius $big-border-radius 0 0;
+      position: relative;
+      margin-top: -30px;
+      padding:0;
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+      &__dish{
+        margin: 0.75em 0.1em;
+        width: 40em;
+        justify-content: space-around;
+      }
+      &__head{
+          display: flex;
+          justify-content: space-evenly;
+      }
     }
-    &__head{
-        display: flex;
-        justify-content: space-evenly;
   }
+  footer{
+    height: 10em;
+      ul{
+        display:flex;
+        flex-direction: row;
+        li{
+          margin: 0;
+            .fa-solid fa-list-ul{
+              margin-left:0;
+              background-color: greenyellow;
+          }
+        }
+      }
   }
-}
 }
