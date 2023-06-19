@@ -22,7 +22,9 @@
   </head>
   <body>
     <header class="header">
-      <img src="src/resources/images/logo/ohmyfood@2x.svg" alt="" srcset="" />
+      <a href="index.html">
+        <img src="src/resources/images/logo/ohmyfood@2x.svg" alt="" srcset=""
+      /></a>
     </header>
     <main>
       <div class="spinner-container">
@@ -34,16 +36,18 @@
           <p>Paris, Belleville</p>
         </div>
       </div>
-      <div class="container container__reserver responsive-test">
-        <a href="src/pages/_components.html">
-          <h1 class="container__title">
-            Réservez le restaurant qui vous convient
-          </h1>
-        </a>
-        <p class="content-test">
-          Découvrez des restaurants d’exception, sélectionnés par nos soins.
-        </p>
-        <button class="btn test-btn">Explorer nos restaurants</button>
+      <div class="section">
+        <div class="container container__reserver responsive-test">
+          <a href="src/pages/_components.html">
+            <h1 class="container__title">
+              Réservez le restaurant qui vous convient
+            </h1>
+          </a>
+          <p class="content-test">
+            Découvrez des restaurants d’exception, sélectionnés par nos soins.
+          </p>
+          <button class="btn test-btn">Explorer nos restaurants</button>
+        </div>
       </div>
       <div class="container container__fonctionnement">
         <a href="src/pages/_components.html">
@@ -75,91 +79,105 @@
           </div>
         </div>
       </div>
-      <div class="container">
-        <div>
-          <h1 class="container__title">Restaurants</h1>
-        </d>
-        <div class="container__restaurants">
-          <a href="_La_palette_des_gouts.html" class="cards" id="restaurant-cards">
-            <div id="restaurant-card" class="cards__card">
-              <div class="cards__card__img">
-                <img
-                  src="src/resources/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                  alt=""
-                />
-                <div class="cards__card__tag">Nouveau</div>
-              </div>
-              <div class="cards__card__content">
-                <div class="cards__cards__card__titles">
-                  <div class="cards__card__title">La palette du goût</div>
-                  <div class="cards__card__subtitle">Ménilmontant</div>
+      <div class="section">
+        <div class="container" id="main">
+          <div>
+            <h1 class="container__title">Restaurants</h1>
+          </div>
+          <div class="container__restaurants">
+            <a
+              href="_La_palette_des_gouts.html"
+              class="cards"
+              id="restaurant-cards"
+            >
+              <div id="restaurant-card" class="cards__card">
+                <div class="cards__card__img">
+                  <img
+                    src="src/resources/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                    alt=""
+                  />
+                  <div class="cards__card__tag">Nouveau</div>
                 </div>
-                <div class="icon">
-                  <i class="far fa-heart"></i>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="_La_note_enchantée.html" class="cards" id="restaurant-cards">
-            <div id="restaurant-card" class="cards__card">
-              <div class="cards__card__img">
-                <img
-                  src="src/resources/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                  alt=""
-                />
-                <div class="cards__card__tag">Nouveau</div>
-              </div>
-              <div class="cards__card__content">
-                <div class="cards__cards__card__titles">
-                  <div class="cards__card__title">La note enchantée</div>
-                  <div class="cards__card__subtitle">Charonne</div>
-                </div>
-                <div class="icon">
-                  <i class="far fa-heart"></i>
+                <div class="cards__card__content">
+                  <div class="cards__cards__card__titles">
+                    <div class="cards__card__title">La palette du goût</div>
+                    <div class="cards__card__subtitle">Ménilmontant</div>
+                  </div>
+                  <div class="icon">
+                    <i class="far fa-heart"></i>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
-          <a href="_À_la_française.html" class="cards" id="restaurant-cards">
-            <div id="restaurant-card" class="cards__card">
-              <div class="cards__card__img">
-                <img
-                  src="src/resources/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                  alt=""
-                />
-                <div class="cards__card__tag">Nouveau</div>
-              </div>
-              <div class="cards__card__content">
-                <div class="cards__cards__card__titles">
-                  <div class="cards__card__title">À la française</div>
-                  <div class="cards__card__subtitle">Cité Rouge</div>
+            </a>
+            <a
+              href="_La_note_enchantée.html"
+              class="cards"
+              id="restaurant-cards"
+            >
+              <div id="restaurant-card" class="cards__card">
+                <div class="cards__card__img">
+                  <img
+                    src="src/resources/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                    alt=""
+                  />
+                  <div class="cards__card__tag">Nouveau</div>
                 </div>
-                <div class="icon">
-                  <i class="fas fa-heart"></i>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="_Le_délice_des_sens.html" class="cards" id="restaurant-cards">
-            <div id="restaurant-card" class="cards__card">
-              <div class="cards__card__img">
-                <img
-                  src="src/resources/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                  alt=""
-                />
-                <div class="cards__card__tag">Nouveau</div>
-              </div>
-              <div class="cards__card__content">
-                <div class="cards__cards__card__titles">
-                  <div class="cards__card__title">Le délice des sens</div>
-                  <div class="cards__card__subtitle">Folie-Méricourt</div>
-                </div>
-                <div class="icon">
-                  <i class="fas fa-heart"></i>
+                <div class="cards__card__content">
+                  <div class="cards__cards__card__titles">
+                    <div class="cards__card__title">La note enchantée</div>
+                    <div class="cards__card__subtitle">Charonne</div>
+                  </div>
+                  <div class="icon">
+                    <i class="far fa-heart"></i>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+            <a href="_À_la_française.html" class="cards" id="restaurant-cards">
+              <div id="restaurant-card" class="cards__card">
+                <div class="cards__card__img">
+                  <img
+                    src="src/resources/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                    alt=""
+                  />
+                  <div class="cards__card__tag">Nouveau</div>
+                </div>
+                <div class="cards__card__content">
+                  <div class="cards__cards__card__titles">
+                    <div class="cards__card__title">À la française</div>
+                    <div class="cards__card__subtitle">Cité Rouge</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="_Le_délice_des_sens.html"
+              class="cards"
+              id="restaurant-cards"
+            >
+              <div id="restaurant-card" class="cards__card">
+                <div class="cards__card__img">
+                  <img
+                    src="src/resources/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                    alt=""
+                  />
+                  <div class="cards__card__tag">Nouveau</div>
+                </div>
+                <div class="cards__card__content">
+                  <div class="cards__cards__card__titles">
+                    <div class="cards__card__title">Le délice des sens</div>
+                    <div class="cards__card__subtitle">Folie-Méricourt</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </main>
@@ -167,7 +185,7 @@
       <!-- <h1 class="container__title">Footer</h1> -->
       <ul>
         <li>
-          <img src="src/resources/images/logo/ohmyfood@2x.svg" alt="" srcset="" />
+          <img src="src/resources/images/logo/svgtest.svg" alt="" srcset="" />
         </li>
         <li><i class="fas fa-list-ul"></i>Proposer un restaurant</li>
         <li><i class="fas fa-list-ul"></i>Proposer un restaurant</li>

@@ -6,6 +6,10 @@
   margin: 0.75em;
 }
 
+a {
+  color: #353535;
+}
+
 html, body, nav, footer, header, main {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -68,6 +72,10 @@ ul {
   color: #F3F3F3;
 }
 
+#main {
+  margin-bottom: 0px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -85,7 +93,6 @@ ul {
   font-weight: normal;
 }
 .container__reserver {
-  background-color: #F3F3F3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -190,20 +197,25 @@ footer ul li .fa-solid fa-list-ul {
 .city {
   display: flex;
   justify-content: center;
-  background: #EAEAEA;
+  background: #7E7E7E;
   padding: 0;
   margin: 0;
 }
 
 @media screen and (min-width: 1200px) {
+  .section {
+    width: 100%;
+    background-color: #EAEAEA;
+    margin: 0;
+    padding: 0;
+  }
   .container {
-    max-width: 100%;
+    max-width: 1200px;
   }
   .container__title {
-    color: lightseagreen;
+    color: #353535;
   }
   .container__restaurants {
-    background-color: #F3F3F3;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -370,6 +382,9 @@ footer ul li .fa-solid fa-list-ul {
   padding: 0;
   margin: 0;
 }
+#fonctionnement-card .icon {
+  color: #7E7E7E;
+}
 
 #restaurant-card {
   box-shadow: none;
@@ -459,7 +474,8 @@ footer ul li .fa-solid fa-list-ul {
   right: 2em;
   top: 1em;
   padding: 0.5em;
-  background-color: aquamarine;
+  color: #008766;
+  background-color: #99E2D0;
   max-width: inherit;
 }
 .cards__card__img {
@@ -968,6 +984,99 @@ footer ul li .fa-solid fa-list-ul {
 }
 .btn-outlined-grey:hover {
   background-color: #f6f6f6;
+}
+
+.btn-green {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75em 1.5em;
+  border-radius: 20px;
+  background-color: #99E2D0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.btn-green:hover {
+  background-color: #ade8d9;
+}
+
+.btn-outlined-green {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75em 1.5em;
+  border-radius: 20px;
+  background-color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 0.3em solid #99E2D0;
+}
+.btn-outlined-green:hover {
+  background-color: #99e2d0;
+}
+
+.btn-icon {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75em 1.5em;
+  border-radius: 20px;
+  background-color: #7E7E7E;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.btn-icon:hover {
+  background-color: #8b8b8b;
+}
+
+.btn-outlined-icon {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75em 1.5em;
+  border-radius: 20px;
+  background-color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 0.3em solid #7E7E7E;
+}
+.btn-outlined-icon:hover {
+  background-color: #7e7e7e;
+}
+
+.btn-greenfont {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75em 1.5em;
+  border-radius: 20px;
+  background-color: #008766;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.btn-greenfont:hover {
+  background-color: #00a179;
+}
+
+.btn-outlined-greenfont {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75em 1.5em;
+  border-radius: 20px;
+  background-color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 0.3em solid #008766;
+}
+.btn-outlined-greenfont:hover {
+  background-color: #008766;
 }
 
 .icon {

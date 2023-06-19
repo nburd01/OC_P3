@@ -41,6 +41,9 @@
     padding:0;
     margin:0;
   }
+  .icon{
+    color : $icon;
+  }
 }
 #restaurant-card {
   box-shadow: none;
@@ -139,7 +142,8 @@
         right: 2em;
         top: 1em;
         padding: 0.5em;
-        background-color: aquamarine;
+        color: $greenfont;
+        background-color: $green;
         max-width: inherit;
       }
     &__img {
