@@ -24,9 +24,17 @@ html footer, body footer, nav footer, footer footer, header footer, main footer 
 }
 html header, body header, nav header, footer header, header header, main header {
   background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 html .footer h1, body .footer h1, nav .footer h1, footer .footer h1, header .footer h1, main .footer h1 {
   color: #F3F3F3;
+}
+
+#home {
+  position: absolute;
+  left: 10px;
 }
 
 main {

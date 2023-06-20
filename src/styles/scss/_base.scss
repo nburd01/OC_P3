@@ -23,16 +23,23 @@ html, body, nav, footer, header, main {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-
   }
   header{
     background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .footer{
     h1{
       color: $primary;
     }
   }
+}
+
+#home{      
+  position: absolute;
+  left: 10px;
 }
 main{
   height: fit-content;
