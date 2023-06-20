@@ -17,8 +17,9 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 9999;
-  animation: hide-spinner 0.5s 2s forwards;
+  z-index: 10;
+  animation: hide-spinner 0.5s 1.5s forwards;
+  margin: 0;
 }
 
 .spinner {
@@ -27,7 +28,7 @@
   border-radius: 50%;
   border: 4px solid #fff;
   border-color: #fff transparent #fff transparent;
-  animation: spinner 1.5s linear 3;
+  animation: spinner 1.5s linear infinite;
 }
 
 @keyframes hide-spinner {

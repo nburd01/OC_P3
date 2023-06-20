@@ -1,17 +1,43 @@
 .icon {
+  // position: relative;
   display: flex;
 }
 
+.icon i {
+
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.icon .far.fa-heart {
+  z-index: 2;
+}
+
+.icon .fas.fa-heart {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.icon:hover .fas.fa-heart {
+  opacity: 1;
+}
+
+.icon:hover .far.fa-heart {
+  opacity: 0;
+}
+
+
 
 .fa-solid.fa-check{
-  color: blue;
+  background: linear-gradient(180deg, $pink 7%, $purple 100%);
 }
 
 .far.fa-heart {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 20px;
-  // background-image: linear-gradient(to bottom, red 50%, lightseagreen 50%);
   background: linear-gradient(180deg, $pink 7%, $purple 100%);
   background-size: 100% 200%;
   background-position: 0% 100%;
@@ -26,10 +52,9 @@
 }
 
 .fas.fa-heart {
-  position: relative;
+  // position: relative;
   width: 100%;
   height: 20px;
-  // background-image: linear-gradient(to bottom, red 50%, lightseagreen 50%);
   background: linear-gradient(180deg, $pink 7%, $purple 100%);
   background-size: 100% 200%;
   background-position: 0% 100%;

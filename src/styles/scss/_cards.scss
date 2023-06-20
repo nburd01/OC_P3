@@ -52,6 +52,49 @@
     margin-left: 0;
     padding-left: 0;
   }
+  .heart{
+    margin-right: 3rem;
+    padding-top: .8rem;
+  }
+  .icon{
+    margin-top: 1rem;
+    position: relative;
+    cursor: pointer;
+    .card-btn {
+        position: absolute;
+    }
+    &:hover {
+        & .heart--outline{
+            display: none;
+            color: $pink;
+        }
+    }
+    &:hover {
+        & .heart--bg{
+            display: block;
+            transition: opacity 1s;
+            opacity: 1;
+        }
+    }
+    .heart--outline {
+        opacity: 1;
+        &:active{
+            display: none;
+            color: transparent;
+        }
+    }
+    .heart--bg {
+        opacity: 0;
+        background-image: $pink;
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: $pink;
+        &:active{
+            display: block;
+            opacity: 1;
+        }
+    }
+  }
 }
 
 

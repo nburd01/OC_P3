@@ -394,6 +394,45 @@ footer ul li .fa-solid fa-list-ul {
   margin-left: 0;
   padding-left: 0;
 }
+#restaurant-card .heart {
+  margin-right: 3rem;
+  padding-top: 0.8rem;
+}
+#restaurant-card .icon {
+  margin-top: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+#restaurant-card .icon .card-btn {
+  position: absolute;
+}
+#restaurant-card .icon:hover .heart--outline {
+  display: none;
+  color: #FF79DA;
+}
+#restaurant-card .icon:hover .heart--bg {
+  display: block;
+  transition: opacity 1s;
+  opacity: 1;
+}
+#restaurant-card .icon .heart--outline {
+  opacity: 1;
+}
+#restaurant-card .icon .heart--outline:active {
+  display: none;
+  color: transparent;
+}
+#restaurant-card .icon .heart--bg {
+  opacity: 0;
+  background-image: #FF79DA;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #FF79DA;
+}
+#restaurant-card .icon .heart--bg:active {
+  display: block;
+  opacity: 1;
+}
 
 #menu-card {
   position: relative;
@@ -1083,12 +1122,36 @@ footer ul li .fa-solid fa-list-ul {
   display: flex;
 }
 
+.icon i {
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.icon .far.fa-heart {
+  z-index: 2;
+}
+
+.icon .fas.fa-heart {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.icon:hover .fas.fa-heart {
+  opacity: 1;
+}
+
+.icon:hover .far.fa-heart {
+  opacity: 0;
+}
+
 .fa-solid.fa-check {
-  color: blue;
+  background: linear-gradient(180deg, #FF79DA 7%, #9356DC 100%);
 }
 
 .far.fa-heart {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 20px;
   background: linear-gradient(180deg, #FF79DA 7%, #9356DC 100%);
@@ -1105,7 +1168,6 @@ footer ul li .fa-solid fa-list-ul {
 }
 
 .fas.fa-heart {
-  position: relative;
   width: 100%;
   height: 20px;
   background: linear-gradient(180deg, #FF79DA 7%, #9356DC 100%);
@@ -1167,8 +1229,9 @@ footer ul li .fa-solid fa-list-ul {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 9999;
-  animation: hide-spinner 0.5s 2s forwards;
+  z-index: 10;
+  animation: hide-spinner 0.5s 1.5s forwards;
+  margin: 0;
 }
 
 .spinner {
@@ -1177,7 +1240,7 @@ footer ul li .fa-solid fa-list-ul {
   border-radius: 50%;
   border: 4px solid #fff;
   border-color: #fff transparent #fff transparent;
-  animation: spinner 1.5s linear 3;
+  animation: spinner 1.5s linear infinite;
 }
 
 @keyframes hide-spinner {
