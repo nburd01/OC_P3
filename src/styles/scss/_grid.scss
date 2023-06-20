@@ -139,15 +139,14 @@ footer{
     padding: 0;
     margin: 0;
 }
+.section{
+  width: 100%;
+  background-color: $background;
+  margin:0;
+  padding:0;
+}
 
 @media screen and (min-width: 1200px) {
-
-  .section{
-    width: 100%;
-    background-color: $background;
-    margin:0;
-    padding:0;
-  }
 
   .container {
 

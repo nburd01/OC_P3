@@ -202,13 +202,14 @@ footer ul li .fa-solid fa-list-ul {
   margin: 0;
 }
 
+.section {
+  width: 100%;
+  background-color: #EAEAEA;
+  margin: 0;
+  padding: 0;
+}
+
 @media screen and (min-width: 1200px) {
-  .section {
-    width: 100%;
-    background-color: #EAEAEA;
-    margin: 0;
-    padding: 0;
-  }
   .container {
     max-width: 1200px;
   }
@@ -436,7 +437,11 @@ footer ul li .fa-solid fa-list-ul {
 
 #menu-card {
   position: relative;
+  overflow: visible;
   height: 4.375em;
+}
+#menu-card .cards__card {
+  position: relative;
 }
 #menu-card .cards__card__content {
   margin: 0;
@@ -454,13 +459,15 @@ footer ul li .fa-solid fa-list-ul {
   width: auto;
 }
 #menu-card:hover .checkmark {
-  transform: translateX(-60px);
+  transform: translateX(60px);
 }
 #menu-card .checkmark {
   position: absolute;
-  left: 450px;
+  left: 390px;
   width: 50px;
   height: 50px;
+  z-index: -1;
+  transform: translateX(-50%);
   transition: transform 0.3s ease;
 }
 #menu-card .checkmark:hover {
@@ -1119,7 +1126,10 @@ footer ul li .fa-solid fa-list-ul {
 }
 
 .icon {
+  position: relative;
   display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .icon i {
@@ -1135,19 +1145,17 @@ footer ul li .fa-solid fa-list-ul {
 .icon .fas.fa-heart {
   z-index: 1;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, background-position 0.5s;
 }
 
 .icon:hover .fas.fa-heart {
   opacity: 1;
-}
-
-.icon:hover .far.fa-heart {
-  opacity: 0;
-}
-
-.fa-solid.fa-check {
   background: linear-gradient(180deg, #FF79DA 7%, #9356DC 100%);
+  background-size: 100% 200%;
+  background-position: 0% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .far.fa-heart {
@@ -1161,26 +1169,6 @@ footer ul li .fa-solid fa-list-ul {
   -webkit-background-clip: text;
   color: transparent;
   transition: background-position 0.5s;
-}
-
-.icon:hover .far.fa-heart {
-  background-position: 0% 0%;
-}
-
-.fas.fa-heart {
-  width: 100%;
-  height: 20px;
-  background: linear-gradient(180deg, #FF79DA 7%, #9356DC 100%);
-  background-size: 100% 200%;
-  background-position: 0% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: background-position 0.5s;
-}
-
-.icon:hover .fas.fa-heart {
-  background-position: 0% 0%;
 }
 
 .dot {
