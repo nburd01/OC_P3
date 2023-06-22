@@ -100,7 +100,8 @@
 
 #menu-card {
   position: relative;
-  overflow: visible;
+  // overflow: visible;
+  overflow: hidden;
   height: 4.375em;
   .cards__card {
     position: relative;
@@ -123,17 +124,25 @@
     width: auto;
   }
   &:hover {
-    .checkmark {
-      transform: translateX(60px);
+    .checkmark, #heart {
+      transform: translateX(-65px);
     }
+  }
+
+  #heart{
+    transition: transform 0.3s ease;
   }
   .checkmark{
     position: absolute;
-    left: 390px;
+    top: -15px;
+    right: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
-    height: 50px;
-    z-index:-1;
-    transform: translateX(-50%);
+    height: 110%;
+    background-color: aqua;
+    border-radius: $base-border-radius;
     transition: transform 0.3s ease;
     &:hover {
       transform: translateX(20px);
@@ -217,6 +226,7 @@
         justify-content: space-between;
         margin-left: 0;
         padding-left: 0;
+        position: absolute;
       }
   }
 }
@@ -262,9 +272,3 @@
         }
     }
 }
-
-@debug "Hello there";
-@debug math.div(4, 2.343);
-@debug math.floor(3.435);
-
-

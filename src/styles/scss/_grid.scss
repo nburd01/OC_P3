@@ -13,7 +13,7 @@ $grid-columns: 12;
   margin: 1em auto;
   padding: 1em;
   box-sizing: border-box;
-  background-color: $background;
+  background-color: $primary;
   &__title {
     color: $black;
   }
@@ -48,7 +48,7 @@ $grid-columns: 12;
   }
 
   &__restaurants {
-    background-color: $background;
+    background-color: $primary;
     padding-bottom:0;
     margin-bottom:0;
   }
@@ -114,11 +114,11 @@ footer {
   flex-direction: row;
 }
 footer{
-  display: flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     color: $white;
-    background-color: $grey;
+    background-color: $black;
     ul{
       display:flex;
       flex-direction: column;
@@ -135,13 +135,13 @@ footer{
 .city{
     display:flex;
     justify-content: center;
-    background: $icon;
+    background: $background;
     padding: 0;
     margin: 0;
 }
 .section{
   width: 100%;
-  background-color: $background;
+  background-color: $primary;
   margin:0;
   padding:0;
 }
@@ -193,16 +193,27 @@ footer{
   }
   footer{
     height: 10em;
-      ul{
-        display:flex;
-        flex-direction: row;
-        li{
-          margin: 0;
-            .fa-solid fa-list-ul{
-              margin-left:0;
-              background-color: greenyellow;
-          }
+    padding-bottom: 3em;
+    padding-top: 5em;
+    display: flex;
+    flex-direction: row-reverse;
+    img{
+      height: 2em; 
+    }
+    ul{
+      display:flex;
+      flex-direction: row;
+      li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+          .fa-solid fa-list-ul{
+            margin-left:0;
+            background-color: greenyellow;
         }
       }
+    }
   }
 }

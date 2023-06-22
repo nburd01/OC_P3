@@ -16,20 +16,11 @@ html, body, nav, footer, header, main {
   padding: 0;
   color: #353535;
 }
-html footer, body footer, nav footer, footer footer, header footer, main footer {
-  background-color: #353535;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
 html header, body header, nav header, footer header, header header, main header {
   background-color: #FFF;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-html .footer h1, body .footer h1, nav .footer h1, footer .footer h1, header .footer h1, main .footer h1 {
-  color: #F3F3F3;
 }
 
 #home {
@@ -92,7 +83,7 @@ ul {
   margin: 1em auto;
   padding: 1em;
   box-sizing: border-box;
-  background-color: #EAEAEA;
+  background-color: #F3F3F3;
 }
 .container__title {
   color: #353535;
@@ -122,7 +113,7 @@ ul {
   flex-wrap: wrap;
 }
 .container__restaurants {
-  background-color: #EAEAEA;
+  background-color: #F3F3F3;
   padding-bottom: 0;
   margin-bottom: 0;
 }
@@ -188,7 +179,7 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   color: #FFF;
-  background-color: #F6F6F6;
+  background-color: #353535;
 }
 footer ul {
   display: flex;
@@ -205,14 +196,14 @@ footer ul li .fa-solid fa-list-ul {
 .city {
   display: flex;
   justify-content: center;
-  background: #7E7E7E;
+  background: #EAEAEA;
   padding: 0;
   margin: 0;
 }
 
 .section {
   width: 100%;
-  background-color: #EAEAEA;
+  background-color: #F3F3F3;
   margin: 0;
   padding: 0;
 }
@@ -262,12 +253,22 @@ footer ul li .fa-solid fa-list-ul {
   }
   footer {
     height: 10em;
+    padding-bottom: 3em;
+    padding-top: 5em;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer img {
+    height: 2em;
   }
   footer ul {
     display: flex;
     flex-direction: row;
   }
   footer ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
   }
   footer ul li .fa-solid fa-list-ul {
@@ -445,7 +446,7 @@ footer ul li .fa-solid fa-list-ul {
 
 #menu-card {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   height: 4.375em;
 }
 #menu-card .cards__card {
@@ -466,16 +467,23 @@ footer ul li .fa-solid fa-list-ul {
   padding: 0;
   width: auto;
 }
-#menu-card:hover .checkmark {
-  transform: translateX(60px);
+#menu-card:hover .checkmark, #menu-card:hover #heart {
+  transform: translateX(-65px);
+}
+#menu-card #heart {
+  transition: transform 0.3s ease;
 }
 #menu-card .checkmark {
   position: absolute;
-  left: 390px;
+  top: -15px;
+  right: -80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
-  height: 50px;
-  z-index: -1;
-  transform: translateX(-50%);
+  height: 110%;
+  background-color: aqua;
+  border-radius: 20px;
   transition: transform 0.3s ease;
 }
 #menu-card .checkmark:hover {
@@ -555,6 +563,7 @@ footer ul li .fa-solid fa-list-ul {
   justify-content: space-between;
   margin-left: 0;
   padding-left: 0;
+  position: absolute;
 }
 
 @media screen and (min-width: 1200px) {
