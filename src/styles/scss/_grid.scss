@@ -1,6 +1,9 @@
 @use "sass:math";
 $grid-columns: 12;
 
+#main{
+  margin-bottom: 0px;
+}
 
 .container {
   display: flex;
@@ -10,7 +13,7 @@ $grid-columns: 12;
   margin: 1em auto;
   padding: 1em;
   box-sizing: border-box;
-  background-color: $background;
+  background-color: $primary;
   &__title {
     color: $black;
   }
@@ -18,8 +21,10 @@ $grid-columns: 12;
     font-weight: normal;
   }
 
+
+
   &__reserver {
-    background-color: $primary;
+    // background-color: $primary;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +48,7 @@ $grid-columns: 12;
   }
 
   &__restaurants {
-    background-color: $grey;
+    background-color: $primary;
     padding-bottom:0;
     margin-bottom:0;
   }
@@ -109,15 +114,15 @@ footer {
   flex-direction: row;
 }
 footer{
-  display: flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     color: $white;
-    background-color: $grey;
+    background-color: $black;
     ul{
       display:flex;
       flex-direction: column;
-      background-color: aqua;
+      // background-color: aqua;
       li{
         margin: 0;
           .fa-solid fa-list-ul{
@@ -134,11 +139,81 @@ footer{
     padding: 0;
     margin: 0;
 }
+.section{
+  width: 100%;
+  background-color: $primary;
+  margin:0;
+  padding:0;
+}
 
 @media screen and (min-width: 1200px) {
+
   .container {
+
+    max-width: 1200px;
     &__title {
-      color: lightseagreen;
+      color: $black;
+    }
+    &__restaurants{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-items: center;
+      &__cards{
+        width: 100%;
+      }
+    }
+    &__fonctionnement {
+      display: flex;
+      background-color: $white;
+      h1 {
+        margin: 10em;
+      }
+  }
+    &__menus{ 
+      border-radius: $big-border-radius $big-border-radius 0 0;
+      position: relative;
+      margin-top: -30px;
+      padding:0;
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+      &__dish{
+        margin: 0.75em 0.1em;
+        width: 40em;
+        justify-content: space-around;
+      }
+      &__head{
+          display: flex;
+          justify-content: space-evenly;
+      }
+    }
+  }
+  footer{
+    height: 10em;
+    padding-bottom: 3em;
+    padding-top: 5em;
+    display: flex;
+    flex-direction: row-reverse;
+    img{
+      height: 2em; 
+    }
+    ul{
+      display:flex;
+      flex-direction: row;
+      li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+          .fa-solid fa-list-ul{
+            margin-left:0;
+            background-color: greenyellow;
+        }
+      }
     }
   }
 }

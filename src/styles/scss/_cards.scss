@@ -14,7 +14,7 @@
 
 
 @media (prefers-reduced-motion: no-preference) {
-  .cards {
+  #restaurant-cards, #menu-cards {
     animation-name: fade-in;
     animation-duration: 400ms;
     animation-delay: 400ms;
@@ -23,13 +23,15 @@
 }
 
 @for $i from 1 to 10 {
-  .cards:nth-child(#{$i}) { animation-delay: $i * 1s; }
+  #restaurant-cards:nth-child(#{$i}) { animation-delay: $i * 1s; };
+  #menu-cards:nth-child(#{$i}) { animation-delay: $i * 1s; }
 }
 
 #fonctionnement-card {
   background-color: $grey;
   flex-direction: row;
   overflow: visible;
+  display: visible;
   align-items: center;
   .title {
     position: relative;
@@ -39,34 +41,118 @@
     padding:0;
     margin:0;
   }
+  .icon{
+    color : $icon;
+  }
 }
 #restaurant-card {
-  // height: 15.6875em;
   box-shadow: none;
-    // background-color: yellow;
   .cards__cards__card__titles {
     width: auto;
     margin-left: 0;
     padding-left: 0;
   }
-}
-#menu-card {
-  height: 4.375em;
-  .cards__card__content{
-    margin:0;
-    padding:0;
+  .heart{
+    margin-right: 3rem;
+    padding-top: .8rem;
   }
-  .cards__card__icons{
+  .icon{
+    margin-top: 1rem;
+    position: relative;
+    cursor: pointer;
+    .card-btn {
+        position: absolute;
+    }
+    &:hover {
+        & .heart--outline{
+            display: none;
+            color: $pink;
+        }
+    }
+    &:hover {
+        & .heart--bg{
+            display: block;
+            transition: opacity 1s;
+            opacity: 1;
+        }
+    }
+    .heart--outline {
+        opacity: 1;
+        &:active{
+            display: none;
+            color: transparent;
+        }
+    }
+    .heart--bg {
+        opacity: 0;
+        background-image: $pink;
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: $pink;
+        &:active{
+            display: block;
+            opacity: 1;
+        }
+    }
+  }
+}
+
+
+#menu-card {
+  position: relative;
+  // overflow: visible;
+  overflow: hidden;
+  height: 4.375em;
+  .cards__card {
+    position: relative;
+  }
+  .cards__card__content {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .cards__card__icons {
     padding: 0;
     margin: 0 0.5em;
     align-self: end;
   }
+
   .cards__card__titles {
-    margin: 0 ;
+    margin: 0;
     padding: 0;
     width: auto;
   }
+  &:hover {
+    .checkmark, #heart {
+      transform: translateX(-65px);
+    }
+  }
+
+  #heart{
+    transition: transform 0.3s ease;
+  }
+  .checkmark{
+    position: absolute;
+    top: -15px;
+    right: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 110%;
+    background-color: aqua;
+    border-radius: $base-border-radius;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: translateX(20px);
+    }
+  }
 }
+
+
+
+
 
 .cards {
   opacity: 0;
@@ -91,7 +177,6 @@
       align-items: center;
       font-size: $base-font-size;
       width: auto;
-      // background-color: bisque;
     }
     &__subtitle {
       width: auto;
@@ -107,7 +192,6 @@
     }
     &__icons {
         width: 10%;
-        // background-color: yellowgreen;
         display: flex;
         justify-content: center;
       }
@@ -116,7 +200,8 @@
         right: 2em;
         top: 1em;
         padding: 0.5em;
-        background-color: aquamarine;
+        color: $greenfont;
+        background-color: $green;
         max-width: inherit;
       }
     &__img {
@@ -125,7 +210,6 @@
       height: 13em;
       overflow: hidden;
       margin: 0;
-      // background-color: aqua;
       object-fit: cover;
       position: relative;
 
@@ -142,35 +226,49 @@
         justify-content: space-between;
         margin-left: 0;
         padding-left: 0;
+        position: absolute;
       }
   }
 }
 
-// @media screen and (min-width: 1200px) {
-//     #fonctionnement-cards{
-//         display: flex;
-//         flex-direction: column;
-//         flex-wrap: wrap;
-//     }
-//     #restaurant-cards{
-//         height: 500px;
-//     }
-//     #menu-cards{
-//         display: flex;
-//         flex-direction: column;
-//         flex-wrap: wrap;
-//     }
-//     .cards{
-//         display:flex;
-//         .card{
-//             background-color: $primary;
-//             border: $base-border-thickness solid #fff;;
-//             border-radius: math.div($base-border-radius,10);
-//             width: 20em;
-//         }
-//     }
-// }
-
-@debug "Hello there";
-@debug math.div(4, 2.343);
-@debug math.floor(3.435);
+@media screen and (min-width: 1200px) {
+    #fonctionnement-cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        #fonctionnement-card {
+          background-color: $grey;
+          width:20em;
+          overflow: visible;
+          align-items: center;
+          .title {
+            position: relative;
+            right: 2em;
+          }
+          .icon, .cards__cards__card__title{
+            padding:0;
+            margin:0;
+          }
+        }
+    }
+    #restaurant-cards{
+        width: 33em;
+    }
+    #menu-cards{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        #menu-card{
+          width: 75%;
+        }
+    }
+    .cards{
+        display:flex;
+        .card{
+            background-color: $primary;
+            border: $base-border-thickness solid #fff;;
+            border-radius: math.div($base-border-radius,10);
+            width: 20em;
+        }
+    }
+}
