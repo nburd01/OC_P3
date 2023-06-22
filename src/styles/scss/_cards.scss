@@ -131,6 +131,7 @@
 
   #heart{
     transition: transform 0.3s ease;
+
   }
   .checkmark{
     position: absolute;
@@ -226,7 +227,6 @@
         justify-content: space-between;
         margin-left: 0;
         padding-left: 0;
-        position: absolute;
       }
   }
 }
@@ -272,3 +272,9 @@
         }
     }
 }
+
+@debug "Hello there";
+@debug math.div(4, 2.343);
+@debug math.floor(3.435);
+
+
