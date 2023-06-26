@@ -495,6 +495,18 @@ footer ul li .fa-solid fa-list-ul {
 #menu-card .checkmark:hover {
   transform: translateX(20px);
 }
+#menu-card .checkmark .fa-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #FFF;
+  color: #99E2D0;
+  text-align: center;
+  line-height: 30px;
+}
 
 .cards {
   opacity: 0;
