@@ -447,7 +447,7 @@ footer ul li .fa-solid fa-list-ul {
 #menu-card {
   position: relative;
   overflow: hidden;
-  height: 4.375em;
+  height: 5.4em;
 }
 #menu-card .cards__card {
   position: relative;
@@ -455,20 +455,26 @@ footer ul li .fa-solid fa-list-ul {
 #menu-card .cards__card__content {
   margin: 0;
   padding: 0;
+  height: 100%;
   position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#menu-card .cards__card__content__ellipsis {
+  display: inline-block;
+  width: 90%;
 }
 #menu-card .cards__card__icons {
   padding: 0;
   margin: 0 0.5em;
   align-self: end;
 }
-#menu-card .cards__card__titles {
-  margin: 0;
-  padding: 0;
-  width: auto;
-}
 #menu-card:hover .checkmark, #menu-card:hover #heart {
   transform: translateX(-65px);
+}
+#menu-card:hover .cards__card__subtitle {
+  width: 90%;
 }
 #menu-card #heart {
   transition: transform 0.3s ease;
@@ -482,7 +488,7 @@ footer ul li .fa-solid fa-list-ul {
   align-items: center;
   width: 50px;
   height: 110%;
-  background-color: aqua;
+  background-color: #99E2D0;
   border-radius: 20px;
   transition: transform 0.3s ease;
 }
@@ -516,9 +522,11 @@ footer ul li .fa-solid fa-list-ul {
   width: auto;
 }
 .cards__card__subtitle {
-  width: auto;
-  margin-right: -4em;
   font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: transform 0.3s ease;
 }
 .cards__card__body {
   font-size: 12px;

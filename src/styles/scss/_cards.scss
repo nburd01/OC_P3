@@ -100,16 +100,23 @@
 
 #menu-card {
   position: relative;
-  // overflow: visible;
   overflow: hidden;
-  height: 4.375em;
+  height: 5.4em;
   .cards__card {
     position: relative;
   }
   .cards__card__content {
     margin: 0;
     padding: 0;
+    height: 100%;
     position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    &__ellipsis{
+      display: inline-block;
+      width: 90%;
+    }
   }
 
   .cards__card__icons {
@@ -118,14 +125,12 @@
     align-self: end;
   }
 
-  .cards__card__titles {
-    margin: 0;
-    padding: 0;
-    width: auto;
-  }
   &:hover {
     .checkmark, #heart {
       transform: translateX(-65px);
+    }
+    .cards__card__subtitle{
+      width: 90%;
     }
   }
 
@@ -142,7 +147,7 @@
     align-items: center;
     width: 50px;
     height: 110%;
-    background-color: aqua;
+    background-color: $secondary;
     border-radius: $base-border-radius;
     transition: transform 0.3s ease;
     &:hover {
@@ -180,9 +185,13 @@
       width: auto;
     }
     &__subtitle {
-      width: auto;
-      margin-right: -4em;
+      // display: flex;
+      // align-items: center;
       font-weight: 300;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      transition: transform 0.3s ease;
     }
 
     &__body {
@@ -231,6 +240,7 @@
   }
 }
 
+
 @media screen and (min-width: 1200px) {
     #fonctionnement-cards{
         display: flex;
@@ -272,9 +282,3 @@
         }
     }
 }
-
-@debug "Hello there";
-@debug math.div(4, 2.343);
-@debug math.floor(3.435);
-
-
