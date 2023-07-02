@@ -118,7 +118,11 @@
       width: 90%;
     }
   }
+  .cards__card__titles {
+    width: 85%;
+    transition: transform 0.3s ease;
 
+  }
   .cards__card__icons {
     padding: 0;
     margin: 0 0.5em;
@@ -132,10 +136,14 @@
     .cards__card__subtitle{
       width: 90%;
     }
+    .cards__card__titles {
+      width: 70%;
+      }
   }
 
   #heart{
     transition: transform 0.3s ease;
+    right: 30px;
 
   }
   .checkmark{
