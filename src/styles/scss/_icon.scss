@@ -70,3 +70,34 @@
   padding: 0.5em;
   background-color: aquamarine;
 }
+
+.logoFooter{
+  width: 50%;
+  height: auto;
+  padding-top:1em;
+  padding-left  :1em;
+}
+
+#mobile{
+  visibility: visible;
+}
+#desktop{
+  visibility: hidden;
+}
+
+@media screen and (min-width: 1200px) {
+  .logoFooter{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+  }
+  #mobile{
+    visibility: hidden;
+  }
+  #desktop{
+    visibility: visible;
+  }
+}

@@ -180,6 +180,7 @@ footer {
   flex-wrap: wrap;
   color: #FFF;
   background-color: #353535;
+  justify-content: flex-start;
 }
 footer ul {
   display: flex;
@@ -252,11 +253,15 @@ footer ul li .fa-solid fa-list-ul {
     justify-content: space-evenly;
   }
   footer {
+    display: flex;
+    justify-content: baseline;
+    align-items: end;
     height: 10em;
     padding-bottom: 3em;
     padding-top: 5em;
     display: flex;
     flex-direction: row-reverse;
+    padding-right: 5em;
   }
   footer img {
     height: 2em;
@@ -264,12 +269,20 @@ footer ul li .fa-solid fa-list-ul {
   footer ul {
     display: flex;
     flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   footer ul li {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
+  }
+  footer ul li image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   footer ul li .fa-solid fa-list-ul {
     margin-left: 0;
@@ -1243,6 +1256,37 @@ footer ul li .fa-solid fa-list-ul {
   background-color: aquamarine;
 }
 
+.logoFooter {
+  width: 50%;
+  height: auto;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+#mobile {
+  visibility: visible;
+}
+
+#desktop {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 1200px) {
+  .logoFooter {
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+  }
+  #mobile {
+    visibility: hidden;
+  }
+  #desktop {
+    visibility: visible;
+  }
+}
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
