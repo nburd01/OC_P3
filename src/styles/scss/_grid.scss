@@ -119,10 +119,10 @@ footer{
     flex-wrap: wrap;
     color: $white;
     background-color: $black;
+    justify-content: flex-start;
     ul{
       display:flex;
       flex-direction: column;
-      // background-color: aqua;
       li{
         margin: 0;
           .fa-solid fa-list-ul{
@@ -192,22 +192,33 @@ footer{
     }
   }
   footer{
+    display: flex;
+    justify-content: baseline;
+    align-items: end;
     height: 10em;
     padding-bottom: 3em;
     padding-top: 5em;
     display: flex;
     flex-direction: row-reverse;
+    padding-right: 5em;
     img{
       height: 2em; 
     }
     ul{
       display:flex;
       flex-direction: row;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       li{
         display: flex;
         justify-content: center;
         align-items: center;
-
+        image{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         margin: 0;
           .fa-solid fa-list-ul{
             margin-left:0;
