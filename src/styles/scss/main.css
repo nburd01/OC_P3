@@ -1182,7 +1182,7 @@ footer ul li .fa-solid fa-list-ul {
 }
 
 .icon:hover .far.fa-heart {
-  opacity: 1;
+  opacity: 0;
   background: linear-gradient(180deg, #ff79da 7%, #9356dc 100%);
   background-size: 100% 200%;
   background-position: 0% 100%;
