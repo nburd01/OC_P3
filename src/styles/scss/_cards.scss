@@ -158,7 +158,6 @@
     width: 50px;
     height: 110%;
     background-color: $green;
-    border-radius: $base-border-radius;
     transition: transform 0.3s ease;
     &:hover {
       transform: translateX(20px);

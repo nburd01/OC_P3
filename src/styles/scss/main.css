@@ -503,7 +503,6 @@ footer ul li .fa-solid fa-list-ul {
   width: 50px;
   height: 110%;
   background-color: #99e2d0;
-  border-radius: 20px;
   transition: transform 0.3s ease;
 }
 #menu-card .checkmark:hover {
