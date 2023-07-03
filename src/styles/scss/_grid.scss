@@ -1,7 +1,7 @@
 @use "sass:math";
 $grid-columns: 12;
 
-#main{
+#main {
   margin-bottom: 0px;
 }
 
@@ -17,14 +17,11 @@ $grid-columns: 12;
   &__title {
     color: $black;
   }
-  .content-test{
+  .content-test {
     font-weight: normal;
   }
 
-
-
   &__reserver {
-    // background-color: $primary;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,7 +38,7 @@ $grid-columns: 12;
     }
   }
 
-  &__commander{
+  &__commander {
     display: flex;
     align-content: space-around;
     flex-wrap: wrap;
@@ -49,8 +46,8 @@ $grid-columns: 12;
 
   &__restaurants {
     background-color: $primary;
-    padding-bottom:0;
-    margin-bottom:0;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   &__fonctionnement {
@@ -58,41 +55,40 @@ $grid-columns: 12;
     h1 {
       margin: 10em;
     }
-}
+  }
 
-  &__menus{ 
+  &__menus {
     border-radius: $big-border-radius $big-border-radius 0 0;
     position: relative;
     margin-top: -30px;
-    padding:0;
-    &__dish{
+    padding: 0;
+    &__dish {
       margin: 0.75em 0.1em;
     }
-    &__head{
+    &__head {
+      display: flex;
+      justify-content: space-between;
+
+      &__h1 {
         display: flex;
-        justify-content: space-between;
-
-
-        &__h1{
-            display: flex;
-            text-align: start;
-            margin-left:0;
+        text-align: start;
+        margin-left: 0;
+      }
+      &__title {
+        display: flex;
+        position: relative;
+        &__underline {
+          width: 3em;
+          height: 0.2em;
+          position: absolute;
+          top: 1em;
+          left: 0;
+          font-size: 20px;
+          color: #fff;
+          line-height: 100px;
+          background: $green;
         }
-        &__title{
-            display:flex;
-            position: relative;
-            &__underline{
-                width:3em;
-                height:0.2em;
-                position: absolute;
-                top:1em;
-                left:0;
-                font-size:20px;
-                color:#fff;
-                line-height:100px;
-                background: $secondary;
-            }   
-        }
+      }
     }
   }
   > a > h1 {
@@ -113,53 +109,51 @@ footer {
   justify-content: space-around;
   flex-direction: row;
 }
-footer{
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: $white;
+  background-color: $black;
+  justify-content: flex-start;
+  ul {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    color: $white;
-    background-color: $black;
-    justify-content: flex-start;
-    ul{
-      display:flex;
-      flex-direction: column;
-      li{
-        margin: 0;
-          .fa-solid fa-list-ul{
-            margin-left:0;
-            background-color: greenyellow;
-        }
+    flex-direction: column;
+    li {
+      margin: 0;
+      .fa-solid fa-list-ul {
+        margin-left: 0;
+        background-color: greenyellow;
       }
     }
+  }
 }
-.city{
-    display:flex;
-    justify-content: center;
-    background: $background;
-    padding: 0;
-    margin: 0;
+.city {
+  display: flex;
+  justify-content: center;
+  background: $background;
+  padding: 0;
+  margin: 0;
 }
-.section{
+.section {
   width: 100%;
   background-color: $primary;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: 1200px) {
-
   .container {
-
     max-width: 1200px;
     &__title {
       color: $black;
     }
-    &__restaurants{
+    &__restaurants {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
       justify-items: center;
-      &__cards{
+      &__cards {
         width: 100%;
       }
     }
@@ -169,29 +163,29 @@ footer{
       h1 {
         margin: 10em;
       }
-  }
-    &__menus{ 
+    }
+    &__menus {
       border-radius: $big-border-radius $big-border-radius 0 0;
       position: relative;
       margin-top: -30px;
-      padding:0;
+      padding: 0;
       max-width: 1200px;
       display: flex;
       flex-wrap: nowrap;
       flex-direction: column;
       align-items: center;
-      &__dish{
+      &__dish {
         margin: 0.75em 0.1em;
         width: 40em;
         justify-content: space-around;
       }
-      &__head{
-          display: flex;
-          justify-content: space-evenly;
+      &__head {
+        display: flex;
+        justify-content: space-evenly;
       }
     }
   }
-  footer{
+  footer {
     display: flex;
     justify-content: baseline;
     align-items: end;
@@ -201,28 +195,28 @@ footer{
     display: flex;
     flex-direction: row-reverse;
     padding-right: 5em;
-    img{
-      height: 2em; 
+    img {
+      height: 2em;
     }
-    ul{
-      display:flex;
+    ul {
+      display: flex;
       flex-direction: row;
       display: flex;
       justify-content: center;
       align-items: center;
-      li{
+      li {
         display: flex;
         justify-content: center;
         align-items: center;
-        image{
+        image {
           display: flex;
           justify-content: center;
           align-items: center;
         }
         margin: 0;
-          .fa-solid fa-list-ul{
-            margin-left:0;
-            background-color: greenyellow;
+        .fa-solid fa-list-ul {
+          margin-left: 0;
+          background-color: greenyellow;
         }
       }
     }
