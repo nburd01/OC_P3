@@ -14,7 +14,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   #restaurant-cards,
-  #menu-cards {
+  .container__menus__dish {
     animation-name: fade-in;
     animation-duration: 400ms;
     animation-delay: 400ms;
@@ -24,10 +24,10 @@
 
 @for $i from 1 to 10 {
   #restaurant-cards:nth-child(#{$i}) {
-    animation-delay: $i * 1s;
+    animation-delay: $i * 0.3s;
   }
-  #menu-cards:nth-child(#{$i}) {
-    animation-delay: $i * 1s;
+  .container__menus__dish:nth-child(#{$i}) {
+    animation-delay: $i * 0.3s;
   }
 }
 
@@ -159,6 +159,7 @@
     width: 50px;
     height: 110%;
     background-color: $green;
+    border-radius: $base-border-radius;
     transition: transform 0.3s ease;
     &:hover {
       transform: translateX(20px);
@@ -179,7 +180,7 @@
 }
 
 .cards {
-  opacity: 0;
+  opacity: 1;
   &__card {
     display: flex;
     flex-direction: column;
@@ -285,7 +286,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     #menu-card {
-      width: 100%;
+      width: 75%;
     }
   }
   .cards {

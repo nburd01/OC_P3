@@ -303,7 +303,7 @@ footer ul li .fa-solid fa-list-ul {
 }
 @media (prefers-reduced-motion: no-preference) {
   #restaurant-cards,
-  #menu-cards {
+  .container__menus__dish {
     animation-name: fade-in;
     animation-duration: 400ms;
     animation-delay: 400ms;
@@ -311,75 +311,75 @@ footer ul li .fa-solid fa-list-ul {
   }
 }
 #restaurant-cards:nth-child(1) {
-  animation-delay: 1s;
+  animation-delay: 0.3s;
 }
 
-#menu-cards:nth-child(1) {
-  animation-delay: 1s;
+.container__menus__dish:nth-child(1) {
+  animation-delay: 0.3s;
 }
 
 #restaurant-cards:nth-child(2) {
-  animation-delay: 2s;
+  animation-delay: 0.6s;
 }
 
-#menu-cards:nth-child(2) {
-  animation-delay: 2s;
+.container__menus__dish:nth-child(2) {
+  animation-delay: 0.6s;
 }
 
 #restaurant-cards:nth-child(3) {
-  animation-delay: 3s;
+  animation-delay: 0.9s;
 }
 
-#menu-cards:nth-child(3) {
-  animation-delay: 3s;
+.container__menus__dish:nth-child(3) {
+  animation-delay: 0.9s;
 }
 
 #restaurant-cards:nth-child(4) {
-  animation-delay: 4s;
+  animation-delay: 1.2s;
 }
 
-#menu-cards:nth-child(4) {
-  animation-delay: 4s;
+.container__menus__dish:nth-child(4) {
+  animation-delay: 1.2s;
 }
 
 #restaurant-cards:nth-child(5) {
-  animation-delay: 5s;
+  animation-delay: 1.5s;
 }
 
-#menu-cards:nth-child(5) {
-  animation-delay: 5s;
+.container__menus__dish:nth-child(5) {
+  animation-delay: 1.5s;
 }
 
 #restaurant-cards:nth-child(6) {
-  animation-delay: 6s;
+  animation-delay: 1.8s;
 }
 
-#menu-cards:nth-child(6) {
-  animation-delay: 6s;
+.container__menus__dish:nth-child(6) {
+  animation-delay: 1.8s;
 }
 
 #restaurant-cards:nth-child(7) {
-  animation-delay: 7s;
+  animation-delay: 2.1s;
 }
 
-#menu-cards:nth-child(7) {
-  animation-delay: 7s;
+.container__menus__dish:nth-child(7) {
+  animation-delay: 2.1s;
 }
 
 #restaurant-cards:nth-child(8) {
-  animation-delay: 8s;
+  animation-delay: 2.4s;
 }
 
-#menu-cards:nth-child(8) {
-  animation-delay: 8s;
+.container__menus__dish:nth-child(8) {
+  animation-delay: 2.4s;
 }
 
 #restaurant-cards:nth-child(9) {
-  animation-delay: 9s;
+  animation-delay: 2.7s;
 }
 
-#menu-cards:nth-child(9) {
-  animation-delay: 9s;
+.container__menus__dish:nth-child(9) {
+  animation-delay: 2.7s;
 }
 
 #fonctionnement-card {
@@ -504,6 +504,7 @@ footer ul li .fa-solid fa-list-ul {
   width: 50px;
   height: 110%;
   background-color: #99e2d0;
+  border-radius: 20px;
   transition: transform 0.3s ease;
 }
 #menu-card .checkmark:hover {
@@ -523,7 +524,7 @@ footer ul li .fa-solid fa-list-ul {
 }
 
 .cards {
-  opacity: 0;
+  opacity: 1;
 }
 .cards__card {
   display: flex;
@@ -629,7 +630,7 @@ footer ul li .fa-solid fa-list-ul {
     flex-wrap: wrap;
   }
   #menu-cards #menu-card {
-    width: 100%;
+    width: 75%;
   }
   .cards {
     display: flex;
