@@ -130,17 +130,24 @@
     margin: 0 0.5em;
     align-self: end;
   }
+  .cards__card__subtitle {
+    // width: 90%;
+    transition: transform 0.3s ease;
+  }
 
   &:hover {
     .checkmark,
     #heart {
       transform: translateX(-65px);
+      
     }
     .cards__card__subtitle {
       width: 90%;
+      transition: width 0.3s ease;
     }
     .cards__card__titles {
       width: 70%;
+      
     }
   }
 
@@ -281,7 +288,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     #menu-card {
-      width: 75%;
+      width: 100%;
     }
   }
   .cards {

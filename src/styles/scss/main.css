@@ -479,12 +479,16 @@ footer ul li .fa-solid fa-list-ul {
   margin: 0 0.5em;
   align-self: end;
 }
+#menu-card .cards__card__subtitle {
+  transition: transform 0.3s ease;
+}
 #menu-card:hover .checkmark,
 #menu-card:hover #heart {
   transform: translateX(-65px);
 }
 #menu-card:hover .cards__card__subtitle {
   width: 90%;
+  transition: width 0.3s ease;
 }
 #menu-card:hover .cards__card__titles {
   width: 70%;
@@ -625,7 +629,7 @@ footer ul li .fa-solid fa-list-ul {
     flex-wrap: wrap;
   }
   #menu-cards #menu-card {
-    width: 75%;
+    width: 100%;
   }
   .cards {
     display: flex;
