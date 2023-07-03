@@ -416,7 +416,6 @@ footer ul li .fa-solid fa-list-ul {
 }
 #restaurant-card .icon {
   margin-top: 1rem;
-  position: relative;
   cursor: pointer;
 }
 #restaurant-card .icon .card-btn {
@@ -1149,13 +1148,14 @@ footer ul li .fa-solid fa-list-ul {
 
 .icon .far.fa-heart {
   z-index: 2;
-  width: -moz-fit-content;
-  width: fit-content;
+  font-size: 2em;
+  transition: opacity 0.3s ease, background-position 0.5s;
 }
 
 .icon .fas.fa-heart {
   z-index: 1;
   opacity: 0;
+  font-size: 2em;
   transition: opacity 0.3s ease, background-position 0.5s;
 }
 
@@ -1172,7 +1172,6 @@ footer ul li .fa-solid fa-list-ul {
 .far.fa-heart {
   position: absolute;
   width: 100%;
-  height: 20px;
   background: #353535;
   background-size: 100% 200%;
   background-position: 0% 100%;
@@ -1180,6 +1179,7 @@ footer ul li .fa-solid fa-list-ul {
   -webkit-background-clip: text;
   color: transparent;
   transition: background-position 0.5s;
+  font-size: 3em;
 }
 
 .icon:hover .far.fa-heart {
@@ -1190,6 +1190,10 @@ footer ul li .fa-solid fa-list-ul {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.container__menus__head > .icon {
+  margin: 0;
 }
 
 .dot {

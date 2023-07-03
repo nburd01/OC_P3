@@ -13,13 +13,16 @@
 
 .icon .far.fa-heart {
   z-index: 2;
-  width: fit-content;
+  // width: fit-content;
+  font-size: 2em;
+  transition: opacity 0.3s ease, background-position 0.5s;
 }
 
 .icon .fas.fa-heart {
   z-index: 1;
   opacity: 0;
-  transition: opacity 0.3s ease, background-position 0.5s;;
+  font-size: 2em;
+  transition: opacity 0.3s ease, background-position 0.5s;
 }
 
 .icon:hover .fas.fa-heart {
@@ -35,7 +38,6 @@
 .far.fa-heart {
   position: absolute;
   width: 100%;
-  height: 20px;
   background: $black;
   background-size: 100% 200%;
   background-position: 0% 100%;
@@ -43,6 +45,7 @@
   -webkit-background-clip: text;
   color: transparent;
   transition: background-position 0.5s;
+  font-size: 3em;
 }
 .icon:hover .far.fa-heart {
   opacity: 0;
@@ -52,7 +55,10 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
 
+.container__menus__head > .icon{
+  margin:0;
 }
 
 .dot {
