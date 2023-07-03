@@ -17,7 +17,7 @@ html, body, nav, footer, header, main {
   color: #353535;
 }
 html header, body header, nav header, footer header, header header, main header {
-  background-color: #FFF;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,10 +67,6 @@ ul {
   list-style-type: none;
 }
 
-.test {
-  color: #F3F3F3;
-}
-
 #main {
   margin-bottom: 0px;
 }
@@ -83,7 +79,7 @@ ul {
   margin: 1em auto;
   padding: 1em;
   box-sizing: border-box;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
 }
 .container__title {
   color: #353535;
@@ -113,12 +109,12 @@ ul {
   flex-wrap: wrap;
 }
 .container__restaurants {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   padding-bottom: 0;
   margin-bottom: 0;
 }
 .container__fonctionnement {
-  background-color: #FFF;
+  background-color: #fff;
 }
 .container__fonctionnement h1 {
   margin: 10em;
@@ -154,7 +150,7 @@ ul {
   font-size: 20px;
   color: #fff;
   line-height: 100px;
-  background: #99E2D0;
+  background: #99e2d0;
 }
 .container > a > h1 {
   margin: 0;
@@ -178,7 +174,7 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  color: #FFF;
+  color: #fff;
   background-color: #353535;
   justify-content: flex-start;
 }
@@ -197,14 +193,14 @@ footer ul li .fa-solid fa-list-ul {
 .city {
   display: flex;
   justify-content: center;
-  background: #EAEAEA;
+  background: #eaeaea;
   padding: 0;
   margin: 0;
 }
 
 .section {
   width: 100%;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   margin: 0;
   padding: 0;
 }
@@ -227,7 +223,7 @@ footer ul li .fa-solid fa-list-ul {
   }
   .container__fonctionnement {
     display: flex;
-    background-color: #FFF;
+    background-color: #fff;
   }
   .container__fonctionnement h1 {
     margin: 10em;
@@ -290,7 +286,7 @@ footer ul li .fa-solid fa-list-ul {
   }
 }
 .pink {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .shrikhand {
@@ -311,7 +307,8 @@ footer ul li .fa-solid fa-list-ul {
   }
 }
 @media (prefers-reduced-motion: no-preference) {
-  #restaurant-cards, #menu-cards {
+  #restaurant-cards,
+  #menu-cards {
     animation-name: fade-in;
     animation-duration: 400ms;
     animation-delay: 400ms;
@@ -391,7 +388,7 @@ footer ul li .fa-solid fa-list-ul {
 }
 
 #fonctionnement-card {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   flex-direction: row;
   overflow: visible;
   display: visible;
@@ -401,12 +398,13 @@ footer ul li .fa-solid fa-list-ul {
   position: relative;
   right: 2em;
 }
-#fonctionnement-card .icon, #fonctionnement-card .cards__cards__card__title {
+#fonctionnement-card .icon,
+#fonctionnement-card .cards__cards__card__title {
   padding: 0;
   margin: 0;
 }
 #fonctionnement-card .icon {
-  color: #7E7E7E;
+  color: #7e7e7e;
 }
 
 #restaurant-card {
@@ -431,7 +429,7 @@ footer ul li .fa-solid fa-list-ul {
 }
 #restaurant-card .icon:hover .heart--outline {
   display: none;
-  color: #FF79DA;
+  color: #ff79da;
 }
 #restaurant-card .icon:hover .heart--bg {
   display: block;
@@ -447,10 +445,10 @@ footer ul li .fa-solid fa-list-ul {
 }
 #restaurant-card .icon .heart--bg {
   opacity: 0;
-  background-image: #FF79DA;
+  background-image: #ff79da;
   background-clip: border-box;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: #FF79DA;
+  -webkit-text-fill-color: #ff79da;
 }
 #restaurant-card .icon .heart--bg:active {
   display: block;
@@ -487,7 +485,8 @@ footer ul li .fa-solid fa-list-ul {
   margin: 0 0.5em;
   align-self: end;
 }
-#menu-card:hover .checkmark, #menu-card:hover #heart {
+#menu-card:hover .checkmark,
+#menu-card:hover #heart {
   transform: translateX(-65px);
 }
 #menu-card:hover .cards__card__subtitle {
@@ -509,7 +508,7 @@ footer ul li .fa-solid fa-list-ul {
   align-items: center;
   width: 50px;
   height: 110%;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   border-radius: 20px;
   transition: transform 0.3s ease;
 }
@@ -523,8 +522,8 @@ footer ul li .fa-solid fa-list-ul {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #FFF;
-  color: #99E2D0;
+  background-color: #fff;
+  color: #99e2d0;
   text-align: center;
   line-height: 30px;
 }
@@ -541,7 +540,7 @@ footer ul li .fa-solid fa-list-ul {
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.31);
   border-radius: 20px;
   width: 100%;
-  background-color: #FFF;
+  background-color: #fff;
   overflow: hidden;
 }
 .cards__card__title {
@@ -578,7 +577,7 @@ footer ul li .fa-solid fa-list-ul {
   top: 1em;
   padding: 0.5em;
   color: #008766;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   max-width: inherit;
 }
 .cards__card__img {
@@ -613,7 +612,7 @@ footer ul li .fa-solid fa-list-ul {
     flex-wrap: wrap;
   }
   #fonctionnement-cards #fonctionnement-card {
-    background-color: #F6F6F6;
+    background-color: #f6f6f6;
     width: 20em;
     overflow: visible;
     align-items: center;
@@ -622,7 +621,8 @@ footer ul li .fa-solid fa-list-ul {
     position: relative;
     right: 2em;
   }
-  #fonctionnement-cards #fonctionnement-card .icon, #fonctionnement-cards #fonctionnement-card .cards__cards__card__title {
+  #fonctionnement-cards #fonctionnement-card .icon,
+  #fonctionnement-cards #fonctionnement-card .cards__cards__card__title {
     padding: 0;
     margin: 0;
   }
@@ -641,7 +641,7 @@ footer ul li .fa-solid fa-list-ul {
     display: flex;
   }
   .cards .card {
-    background-color: #F3F3F3;
+    background-color: #f3f3f3;
     border: 0.3em solid #fff;
     border-radius: 2px;
     width: 20em;
@@ -668,20 +668,20 @@ footer ul li .fa-solid fa-list-ul {
   border: 0;
   padding: 0.75em 1.5em;
   border-radius: 20px;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.test-btn {
-  color: #FFF;
-  background: linear-gradient(180deg, #FF79DA 7%, #9356DC 100%);
+.primary-btn {
+  color: #fff;
+  background: linear-gradient(180deg, #ff79da 7%, #9356dc 100%);
   font-weight: 700;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.31);
   transition-property: transform;
   transition: all 400ms;
 }
-.test-btn:hover {
+.primary-btn:hover {
   background: linear-gradient(180deg, #ff93e1, #a16be0);
   box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.31);
 }
@@ -693,7 +693,7 @@ footer ul li .fa-solid fa-list-ul {
   border: 0;
   padding: 0.75em 1.5em;
   border-radius: 20px;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -711,41 +711,10 @@ footer ul li .fa-solid fa-list-ul {
   background-color: #fff;
   width: -moz-fit-content;
   width: fit-content;
-  border: 0.3em solid #F3F3F3;
+  border: 0.3em solid #f3f3f3;
 }
 .btn-outlined-primary:hover {
   background-color: #f3f3f3;
-}
-
-.btn-secondary {
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  border: 0;
-  padding: 0.75em 1.5em;
-  border-radius: 20px;
-  background-color: #99E2D0;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.btn-secondary:hover {
-  background-color: #ade8d9;
-}
-
-.btn-outlined-secondary {
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  border: 0;
-  padding: 0.75em 1.5em;
-  border-radius: 20px;
-  background-color: #fff;
-  width: -moz-fit-content;
-  width: fit-content;
-  border: 0.3em solid #99E2D0;
-}
-.btn-outlined-secondary:hover {
-  background-color: #99e2d0;
 }
 
 .btn-third {
@@ -786,7 +755,7 @@ footer ul li .fa-solid fa-list-ul {
   border: 0;
   padding: 0.75em 1.5em;
   border-radius: 20px;
-  background-color: #89C8FA;
+  background-color: #89c8fa;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -804,7 +773,7 @@ footer ul li .fa-solid fa-list-ul {
   background-color: #fff;
   width: -moz-fit-content;
   width: fit-content;
-  border: 0.3em solid #89C8FA;
+  border: 0.3em solid #89c8fa;
 }
 .btn-outlined-fourth:hover {
   background-color: #89c8fa;
@@ -817,7 +786,7 @@ footer ul li .fa-solid fa-list-ul {
   border: 0;
   padding: 0.75em 1.5em;
   border-radius: 20px;
-  background-color: #003A68;
+  background-color: #003a68;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -835,7 +804,7 @@ footer ul li .fa-solid fa-list-ul {
   background-color: #fff;
   width: -moz-fit-content;
   width: fit-content;
-  border: 0.3em solid #003A68;
+  border: 0.3em solid #003a68;
 }
 .btn-outlined-fifth:hover {
   background-color: #003a68;
@@ -848,7 +817,7 @@ footer ul li .fa-solid fa-list-ul {
   border: 0;
   padding: 0.75em 1.5em;
   border-radius: 20px;
-  background-color: #9356DC;
+  background-color: #9356dc;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -866,7 +835,7 @@ footer ul li .fa-solid fa-list-ul {
   background-color: #fff;
   width: -moz-fit-content;
   width: fit-content;
-  border: 0.3em solid #9356DC;
+  border: 0.3em solid #9356dc;
 }
 .btn-outlined-purple:hover {
   background-color: #9356dc;
@@ -879,7 +848,7 @@ footer ul li .fa-solid fa-list-ul {
   border: 0;
   padding: 0.75em 1.5em;
   border-radius: 20px;
-  background-color: #FF79DA;
+  background-color: #ff79da;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -897,7 +866,7 @@ footer ul li .fa-solid fa-list-ul {
   background-color: #fff;
   width: -moz-fit-content;
   width: fit-content;
-  border: 0.3em solid #FF79DA;
+  border: 0.3em solid #ff79da;
 }
 .btn-outlined-pink:hover {
   background-color: #ff79da;
@@ -1003,7 +972,7 @@ footer ul li .fa-solid fa-list-ul {
   border: 0;
   padding: 0.75em 1.5em;
   border-radius: 20px;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -1021,7 +990,7 @@ footer ul li .fa-solid fa-list-ul {
   background-color: #fff;
   width: -moz-fit-content;
   width: fit-content;
-  border: 0.3em solid #EAEAEA;
+  border: 0.3em solid #eaeaea;
 }
 .btn-outlined-background:hover {
   background-color: #eaeaea;
@@ -1034,7 +1003,7 @@ footer ul li .fa-solid fa-list-ul {
   border: 0;
   padding: 0.75em 1.5em;
   border-radius: 20px;
-  background-color: #FFF;
+  background-color: #fff;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -1052,7 +1021,7 @@ footer ul li .fa-solid fa-list-ul {
   background-color: #fff;
   width: -moz-fit-content;
   width: fit-content;
-  border: 0.3em solid #FFF;
+  border: 0.3em solid #fff;
 }
 .btn-outlined-white:hover {
   background-color: white;
@@ -1065,7 +1034,7 @@ footer ul li .fa-solid fa-list-ul {
   border: 0;
   padding: 0.75em 1.5em;
   border-radius: 20px;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -1083,7 +1052,7 @@ footer ul li .fa-solid fa-list-ul {
   background-color: #fff;
   width: -moz-fit-content;
   width: fit-content;
-  border: 0.3em solid #F6F6F6;
+  border: 0.3em solid #f6f6f6;
 }
 .btn-outlined-grey:hover {
   background-color: #f6f6f6;
@@ -1096,7 +1065,7 @@ footer ul li .fa-solid fa-list-ul {
   border: 0;
   padding: 0.75em 1.5em;
   border-radius: 20px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -1114,7 +1083,7 @@ footer ul li .fa-solid fa-list-ul {
   background-color: #fff;
   width: -moz-fit-content;
   width: fit-content;
-  border: 0.3em solid #99E2D0;
+  border: 0.3em solid #99e2d0;
 }
 .btn-outlined-green:hover {
   background-color: #99e2d0;
@@ -1127,7 +1096,7 @@ footer ul li .fa-solid fa-list-ul {
   border: 0;
   padding: 0.75em 1.5em;
   border-radius: 20px;
-  background-color: #7E7E7E;
+  background-color: #7e7e7e;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -1145,7 +1114,7 @@ footer ul li .fa-solid fa-list-ul {
   background-color: #fff;
   width: -moz-fit-content;
   width: fit-content;
-  border: 0.3em solid #7E7E7E;
+  border: 0.3em solid #7e7e7e;
 }
 .btn-outlined-icon:hover {
   background-color: #7e7e7e;
@@ -1207,7 +1176,7 @@ footer ul li .fa-solid fa-list-ul {
 
 .icon:hover .fas.fa-heart {
   opacity: 1;
-  background: linear-gradient(180deg, #FF79DA 7%, #9356DC 100%);
+  background: linear-gradient(180deg, #ff79da 7%, #9356dc 100%);
   background-size: 100% 200%;
   background-position: 0% 100%;
   background-clip: text;
@@ -1219,7 +1188,7 @@ footer ul li .fa-solid fa-list-ul {
   position: absolute;
   width: 100%;
   height: 20px;
-  background: linear-gradient(180deg, #FF79DA 7%, #9356DC 100%);
+  background: linear-gradient(180deg, #ff79da 7%, #9356dc 100%);
   background-size: 100% 200%;
   background-position: 0% 100%;
   background-clip: text;
@@ -1239,8 +1208,8 @@ footer ul li .fa-solid fa-list-ul {
   text-align: center;
   font-size: 32px;
   border: 2px solid var(--grey-shade);
-  background-color: #9356DC;
-  color: #FFF;
+  background-color: #9356dc;
+  color: #fff;
   font-weight: 300;
   font-size: 16px;
   position: relative;
