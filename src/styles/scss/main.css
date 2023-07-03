@@ -285,10 +285,6 @@ footer ul li .fa-solid fa-list-ul {
     background-color: greenyellow;
   }
 }
-.pink {
-  color: #9356dc;
-}
-
 .shrikhand {
   font-family: "Shrikhand", cursive;
   margin-left: 0;
@@ -647,20 +643,6 @@ footer ul li .fa-solid fa-list-ul {
     width: 20em;
   }
 }
-.navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: aqua;
-  justify-content: space-around;
-}
-.navbar .navbar__link {
-  margin-left: 30px;
-  color: #242424;
-  text-decoration: none;
-}
-
 .btn {
   text-decoration: none;
   cursor: pointer;
