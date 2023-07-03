@@ -505,9 +505,6 @@ footer ul li .fa-solid fa-list-ul {
   background-color: #99e2d0;
   transition: transform 0.3s ease;
 }
-#menu-card .checkmark:hover {
-  transform: translateX(20px);
-}
 #menu-card .checkmark .fa-check {
   display: flex;
   align-items: center;
