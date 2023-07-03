@@ -159,7 +159,6 @@
     width: 50px;
     height: 110%;
     background-color: $green;
-    border-radius: $base-border-radius;
     transition: transform 0.3s ease;
     &:hover {
       transform: translateX(20px);
@@ -286,7 +285,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     #menu-card {
-      width: 75%;
+      width: 100%;
     }
   }
   .cards {
