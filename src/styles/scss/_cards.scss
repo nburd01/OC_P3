@@ -186,6 +186,7 @@
 .cards {
   opacity: 1;
   &__card {
+
     flex-direction: inherit;
     display: flex;
     flex-direction: column;
@@ -262,6 +263,10 @@
     }
   }
 }
+.row{
+  display: flex;
+  flex-direction: row;
+}
 
 @media screen and (min-width: 1200px) {
   .fonctionnement-cards {
@@ -269,7 +274,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     .fonctionnement-card {
-      // flex-direction: row;
+      flex-direction: row;
       flex-direction: inherit;
       background-color: $grey;
       width: 20em;

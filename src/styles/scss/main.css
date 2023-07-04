@@ -602,6 +602,11 @@ footer ul li .fa-solid fa-list-ul {
   padding-left: 0;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
 @media screen and (min-width: 1200px) {
   .fonctionnement-cards {
     display: flex;
@@ -609,6 +614,7 @@ footer ul li .fa-solid fa-list-ul {
     flex-wrap: wrap;
   }
   .fonctionnement-cards .fonctionnement-card {
+    flex-direction: row;
     flex-direction: inherit;
     background-color: #f6f6f6;
     width: 20em;
