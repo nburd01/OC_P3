@@ -23,7 +23,7 @@ html header, body header, nav header, footer header, header header, main header 
   align-items: center;
 }
 
-#home {
+.home {
   position: absolute;
   left: 10px;
 }
@@ -302,15 +302,16 @@ footer ul li .fa-solid fa-list-ul {
   }
 }
 @media (prefers-reduced-motion: no-preference) {
-  #restaurant-cards,
+  .restaurant-cards,
   .container__menus__dish {
     animation-name: fade-in;
     animation-duration: 400ms;
     animation-delay: 400ms;
     animation-fill-mode: both;
+    border-radius: 40px;
   }
 }
-#restaurant-cards:nth-child(1) {
+.restaurant-cards:nth-child(1) {
   animation-delay: 0.3s;
 }
 
@@ -318,7 +319,7 @@ footer ul li .fa-solid fa-list-ul {
   animation-delay: 0.3s;
 }
 
-#restaurant-cards:nth-child(2) {
+.restaurant-cards:nth-child(2) {
   animation-delay: 0.6s;
 }
 
@@ -326,7 +327,7 @@ footer ul li .fa-solid fa-list-ul {
   animation-delay: 0.6s;
 }
 
-#restaurant-cards:nth-child(3) {
+.restaurant-cards:nth-child(3) {
   animation-delay: 0.9s;
 }
 
@@ -334,7 +335,7 @@ footer ul li .fa-solid fa-list-ul {
   animation-delay: 0.9s;
 }
 
-#restaurant-cards:nth-child(4) {
+.restaurant-cards:nth-child(4) {
   animation-delay: 1.2s;
 }
 
@@ -342,7 +343,7 @@ footer ul li .fa-solid fa-list-ul {
   animation-delay: 1.2s;
 }
 
-#restaurant-cards:nth-child(5) {
+.restaurant-cards:nth-child(5) {
   animation-delay: 1.5s;
 }
 
@@ -350,7 +351,7 @@ footer ul li .fa-solid fa-list-ul {
   animation-delay: 1.5s;
 }
 
-#restaurant-cards:nth-child(6) {
+.restaurant-cards:nth-child(6) {
   animation-delay: 1.8s;
 }
 
@@ -358,7 +359,7 @@ footer ul li .fa-solid fa-list-ul {
   animation-delay: 1.8s;
 }
 
-#restaurant-cards:nth-child(7) {
+.restaurant-cards:nth-child(7) {
   animation-delay: 2.1s;
 }
 
@@ -366,7 +367,7 @@ footer ul li .fa-solid fa-list-ul {
   animation-delay: 2.1s;
 }
 
-#restaurant-cards:nth-child(8) {
+.restaurant-cards:nth-child(8) {
   animation-delay: 2.4s;
 }
 
@@ -374,7 +375,7 @@ footer ul li .fa-solid fa-list-ul {
   animation-delay: 2.4s;
 }
 
-#restaurant-cards:nth-child(9) {
+.restaurant-cards:nth-child(9) {
   animation-delay: 2.7s;
 }
 
@@ -382,82 +383,83 @@ footer ul li .fa-solid fa-list-ul {
   animation-delay: 2.7s;
 }
 
-#fonctionnement-card {
+.fonctionnement-card {
   background-color: #f6f6f6;
   flex-direction: row;
   overflow: visible;
   display: visible;
   align-items: center;
 }
-#fonctionnement-card .title {
+.fonctionnement-card .title {
   position: relative;
   right: 2em;
 }
-#fonctionnement-card .icon,
-#fonctionnement-card .cards__cards__card__title {
+.fonctionnement-card .icon,
+.fonctionnement-card .cards__cards__card__title {
   padding: 0;
   margin: 0;
 }
-#fonctionnement-card .icon {
+.fonctionnement-card .icon {
   color: #7e7e7e;
 }
 
-#restaurant-card {
+.restaurant-card {
   box-shadow: none;
+  border-radius: 50px;
 }
-#restaurant-card .cards__cards__card__titles {
+.restaurant-card .cards__cards__card__titles {
   width: auto;
   margin-left: 0;
   padding-left: 0;
 }
-#restaurant-card .heart {
+.restaurant-card .heart {
   margin-right: 3rem;
   padding-top: 0.8rem;
 }
-#restaurant-card .icon {
+.restaurant-card .icon {
   margin-top: 1rem;
   cursor: pointer;
 }
-#restaurant-card .icon .card-btn {
+.restaurant-card .icon .card-btn {
   position: absolute;
 }
-#restaurant-card .icon:hover .heart--outline {
+.restaurant-card .icon:hover .heart--outline {
   display: none;
   color: #ff79da;
 }
-#restaurant-card .icon:hover .heart--bg {
+.restaurant-card .icon:hover .heart--bg {
   display: block;
   transition: opacity 1s;
   opacity: 1;
 }
-#restaurant-card .icon .heart--outline {
+.restaurant-card .icon .heart--outline {
   opacity: 1;
 }
-#restaurant-card .icon .heart--outline:active {
+.restaurant-card .icon .heart--outline:active {
   display: none;
   color: transparent;
 }
-#restaurant-card .icon .heart--bg {
+.restaurant-card .icon .heart--bg {
   opacity: 0;
   background-image: #ff79da;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #ff79da;
 }
-#restaurant-card .icon .heart--bg:active {
+.restaurant-card .icon .heart--bg:active {
   display: block;
   opacity: 1;
 }
 
-#menu-card {
+.menu-card {
   position: relative;
   overflow: hidden;
   height: 5.4em;
 }
-#menu-card .cards__card {
+.menu-card .cards__card {
   position: relative;
 }
-#menu-card .cards__card__content {
+.menu-card .cards__card__content {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -466,38 +468,38 @@ footer ul li .fa-solid fa-list-ul {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#menu-card .cards__card__content__ellipsis {
+.menu-card .cards__card__content__ellipsis {
   display: inline-block;
   width: 90%;
 }
-#menu-card .cards__card__titles {
+.menu-card .cards__card__titles {
   width: 85%;
   transition: transform 0.3s ease;
 }
-#menu-card .cards__card__icons {
+.menu-card .cards__card__icons {
   padding: 0;
   margin: 0 0.5em;
   align-self: end;
 }
-#menu-card .cards__card__subtitle {
+.menu-card .cards__card__subtitle {
   transition: transform 0.3s ease;
 }
-#menu-card:hover .checkmark,
-#menu-card:hover #heart {
+.menu-card:hover .checkmark,
+.menu-card:hover #heart {
   transform: translateX(-65px);
 }
-#menu-card:hover .cards__card__subtitle {
+.menu-card:hover .cards__card__subtitle {
   width: 90%;
   transition: width 0.3s ease;
 }
-#menu-card:hover .cards__card__titles {
+.menu-card:hover .cards__card__titles {
   width: 70%;
 }
-#menu-card #heart {
+.menu-card #heart {
   transition: transform 0.3s ease;
   right: 30px;
 }
-#menu-card .checkmark {
+.menu-card .checkmark {
   position: absolute;
   top: -15px;
   right: -80px;
@@ -509,7 +511,7 @@ footer ul li .fa-solid fa-list-ul {
   background-color: #99e2d0;
   transition: transform 0.3s ease;
 }
-#menu-card .checkmark .fa-check {
+.menu-card .checkmark .fa-check {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -526,6 +528,7 @@ footer ul li .fa-solid fa-list-ul {
   opacity: 1;
 }
 .cards__card {
+  flex-direction: inherit;
   display: flex;
   flex-direction: column;
   border: none;
@@ -535,7 +538,6 @@ footer ul li .fa-solid fa-list-ul {
   border-radius: 20px;
   width: 100%;
   background-color: #fff;
-  overflow: hidden;
 }
 .cards__card__title {
   font-size: 32px;
@@ -583,6 +585,7 @@ footer ul li .fa-solid fa-list-ul {
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
+  border-radius: 20px 20px 0 0;
 }
 .cards__card__img img {
   margin: 0;
@@ -605,22 +608,23 @@ footer ul li .fa-solid fa-list-ul {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  #fonctionnement-cards #fonctionnement-card {
+  #fonctionnement-cards .fonctionnement-card {
+    flex-direction: inherit;
     background-color: #f6f6f6;
     width: 20em;
     overflow: visible;
     align-items: center;
   }
-  #fonctionnement-cards #fonctionnement-card .title {
+  #fonctionnement-cards .fonctionnement-card .title {
     position: relative;
     right: 2em;
   }
-  #fonctionnement-cards #fonctionnement-card .icon,
-  #fonctionnement-cards #fonctionnement-card .cards__cards__card__title {
+  #fonctionnement-cards .fonctionnement-card .icon,
+  #fonctionnement-cards .fonctionnement-card .cards__cards__card__title {
     padding: 0;
     margin: 0;
   }
-  #restaurant-cards {
+  .restaurant-cards {
     width: 33em;
   }
   #menu-cards {

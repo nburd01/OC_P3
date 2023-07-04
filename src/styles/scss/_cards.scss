@@ -13,17 +13,18 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  #restaurant-cards,
+  .restaurant-cards,
   .container__menus__dish {
     animation-name: fade-in;
     animation-duration: 400ms;
     animation-delay: 400ms;
     animation-fill-mode: both;
+    border-radius: 40px;
   }
 }
 
 @for $i from 1 to 10 {
-  #restaurant-cards:nth-child(#{$i}) {
+  .restaurant-cards:nth-child(#{$i}) {
     animation-delay: $i * 0.3s;
   }
   .container__menus__dish:nth-child(#{$i}) {
@@ -31,7 +32,7 @@
   }
 }
 
-#fonctionnement-card {
+.fonctionnement-card {
   background-color: $grey;
   flex-direction: row;
   overflow: visible;
@@ -50,8 +51,9 @@
     color: $icon;
   }
 }
-#restaurant-card {
+.restaurant-card {
   box-shadow: none;
+  border-radius: 50px;
   .cards__cards__card__titles {
     width: auto;
     margin-left: 0;
@@ -101,7 +103,7 @@
   }
 }
 
-#menu-card {
+.menu-card {
   position: relative;
   overflow: hidden;
   height: 5.4em;
@@ -184,6 +186,7 @@
 .cards {
   opacity: 1;
   &__card {
+    flex-direction: inherit;
     display: flex;
     flex-direction: column;
     border: none;
@@ -193,7 +196,7 @@
     border-radius: math.div($base-border-radius, 1);
     width: 100%;
     background-color: $white;
-    overflow: hidden;
+    // overflow: hidden;
 
     &__title {
       font-size: $font-size-xl;
@@ -241,6 +244,7 @@
       margin: 0;
       object-fit: cover;
       position: relative;
+      border-radius: 20px 20px 0 0;
 
       img {
         margin: 0;
@@ -264,7 +268,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    #fonctionnement-card {
+    .fonctionnement-card {
+      // flex-direction: row;
+      flex-direction: inherit;
       background-color: $grey;
       width: 20em;
       overflow: visible;
@@ -280,7 +286,7 @@
       }
     }
   }
-  #restaurant-cards {
+  .restaurant-cards {
     width: 33em;
   }
   #menu-cards {
