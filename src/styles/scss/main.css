@@ -482,6 +482,7 @@ footer ul li .fa-solid fa-list-ul {
   align-self: end;
 }
 .menu-card .cards__card__subtitle {
+  width: 85%;
   transition: transform 0.3s ease;
 }
 .menu-card:hover .checkmark,
