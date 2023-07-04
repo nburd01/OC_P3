@@ -96,10 +96,10 @@
   padding-left  :1em;
 }
 
-#mobile{
+.mobile{
   visibility: visible;
 }
-#desktop{
+.desktop{
   visibility: hidden;
 }
 
@@ -112,10 +112,10 @@
     justify-content: center;
     padding-top: 0;
   }
-  #mobile{
+  .mobile{
     visibility: hidden;
   }
-  #desktop{
+  .desktop{
     visibility: visible;
   }
 }
