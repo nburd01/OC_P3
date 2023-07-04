@@ -485,7 +485,7 @@ footer ul li .fa-solid fa-list-ul {
   transition: transform 0.3s ease;
 }
 .menu-card:hover .checkmark,
-.menu-card:hover #heart {
+.menu-card:hover .heart {
   transform: translateX(-65px);
 }
 .menu-card:hover .cards__card__subtitle {
@@ -495,7 +495,7 @@ footer ul li .fa-solid fa-list-ul {
 .menu-card:hover .cards__card__titles {
   width: 70%;
 }
-.menu-card #heart {
+.menu-card .heart {
   transition: transform 0.3s ease;
   right: 30px;
 }
@@ -603,36 +603,36 @@ footer ul li .fa-solid fa-list-ul {
 }
 
 @media screen and (min-width: 1200px) {
-  #fonctionnement-cards {
+  .fonctionnement-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  #fonctionnement-cards .fonctionnement-card {
+  .fonctionnement-cards .fonctionnement-card {
     flex-direction: inherit;
     background-color: #f6f6f6;
     width: 20em;
     overflow: visible;
     align-items: center;
   }
-  #fonctionnement-cards .fonctionnement-card .title {
+  .fonctionnement-cards .fonctionnement-card .title {
     position: relative;
     right: 2em;
   }
-  #fonctionnement-cards .fonctionnement-card .icon,
-  #fonctionnement-cards .fonctionnement-card .cards__cards__card__title {
+  .fonctionnement-cards .fonctionnement-card .icon,
+  .fonctionnement-cards .fonctionnement-card .cards__cards__card__title {
     padding: 0;
     margin: 0;
   }
   .restaurant-cards {
     width: 33em;
   }
-  #menu-cards {
+  .menu-cards {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
-  #menu-cards #menu-card {
+  .menu-cards .menu-card {
     width: 100%;
   }
   .cards {
